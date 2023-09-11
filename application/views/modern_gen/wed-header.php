@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     $social_media       = $myHelpers->global_lib->get_option('social_media');
     $company_tel        = $myHelpers->global_lib->get_option('company_tel');
@@ -6,8 +6,7 @@
     $site_language      = $myHelpers->global_lib->get_option('site_language');
     $default_language   = $myHelpers->global_lib->get_option('default_language');
     $website_title      = $myHelpers->global_lib->get_option('website_title');
-    
-   
+
 
 ?>
 
@@ -23,13 +22,11 @@
             max-width: 100% !important;
         }
     </style>
-    
 
-    
-  
+
     <meta name='robots' content='noindex, follow' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
 	<title><?php echo $slider->wedding_title ?> | <?php echo $website_title; ?> </title>
 	<meta name="description" content="You&#039;re Invited " />
 	<meta property="og:locale" content="en_US" />
@@ -57,12 +54,9 @@
     <meta name="msapplication-TileImage" content="<?php echo  base_url().'uploads/weddings/'.$couple->row()->bride_photo; ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    
-    
+
 	<?php $this->load->view("$theme/wed-css"); ?>
-	
-    
-	
+
 </head>
 
 
@@ -74,34 +68,32 @@
 <body class="post-template post-template-elementor_canvas single single-post postid-99779 single-format-standard wp-custom-logo wp-embed-responsive ehf-template-generatepress 
 ehf-stylesheet-generatepress right-sidebar nav-below-header separate-containers header-aligned-left dropdown-hover featured-image-active elementor-default elementor-template-canvas 
 elementor-kit-10 elementor-page elementor-page-99779">
-	
+
 	<div data-elementor-type="wp-post" data-elementor-id="99779" class="elementor elementor-99779">
         <div class="elementor-inner">
             <div class="elementor-section-wrap">
-                
-                	<?php $this->load->view("$theme/wed-top-header"); ?>
-                	
-                	<?php $this->load->view("$theme/wed-opening"); ?>
-                	
-                	<?php $this->load->view("$theme/wed-body1"); ?>
-                	
-                	<?php $this->load->view("$theme/wed-body2"); ?>
-                	
-                	
-                	<!--<?php //$this->load->view($content); ?>-->
-	
-	
-        	</div>
-	
-	    </div>
-	
+
+					<?php $this->load->view("$theme/wed-top-header"); ?>
+
+					<?php $this->load->view("$theme/wed-opening"); ?>
+
+					<?php $this->load->view("$theme/wed-body1"); ?>
+
+					<?php $this->load->view("$theme/wed-body2"); ?>
+
+                	<!-- <?php //$this->load->view($content); ?> -->
+
+			</div>
+
+		</div>
+
 	</div>
-	
-	
+
+
 	<?php $this->load->view("$theme/wed-bottom"); ?>
-	
-    
-    <?php $this->load->view("$theme/wed-bottom-footer"); ?>
+
+
+	<?php $this->load->view("$theme/wed-bottom-footer"); ?>
 
 
 
