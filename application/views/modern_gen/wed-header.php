@@ -75,8 +75,6 @@ elementor-kit-10 elementor-page elementor-page-99779">
 
 					<?php $this->load->view("$theme/wed-top-header"); ?>
 
-					<?php $this->load->view("$theme/wed-opening"); ?>
-
 					<?php $this->load->view("$theme/wed-body1"); ?>
 
 					<?php $this->load->view("$theme/wed-body2"); ?>
@@ -88,9 +86,6 @@ elementor-kit-10 elementor-page elementor-page-99779">
 		</div>
 
 	</div>
-
-
-	<?php $this->load->view("$theme/wed-bottom"); ?>
 
 
 	<?php $this->load->view("$theme/wed-bottom-footer"); ?>

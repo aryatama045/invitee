@@ -1,119 +1,13 @@
+<?php
+global $settings;
 
-            
-            
-                <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-59b71fed elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="59b71fed" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
-                    <div class="elementor-container elementor-column-gap-default">
-                        <div class="elementor-row">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6a3ccd05 wdp-sticky-section-no" data-id="6a3ccd05" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                    <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-5526a05f wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="5526a05f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">I choose you</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+if(!isset($wedding_id)) return false;
 
+$gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.image_name as med,wg1.image_path
+from wedding_gallery wg1 INNER JOIN wedding_gallery wg2 on wg2.parent_image_id = wg1.image_id and wg2.image_type = 'medium' WHERE wg1.image_type='original'
+and wg2.wedding_id=$wedding_id ");
 
-                <section data-dce-background-color="#E3FCBF" class="elementor-section elementor-top-section elementor-element elementor-element-7bd3385 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="7bd3385" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
-                    <div class="elementor-background-overlay"></div>
-                    <div class="elementor-container elementor-column-gap-no">
-                        <div class="elementor-row">
-                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36dd1671 wdp-sticky-section-no" data-id="36dd1671" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99789,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI9.jpg&quot;},{&quot;id&quot;:99796,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI16.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                    <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-7b15863b wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="7b15863b" data-element_type="widget" data-widget_type="spacer.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-spacer">
-                                                    <div class="elementor-spacer-inner"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <section data-dce-background-color="#0E090933" class="elementor-section elementor-inner-section elementor-element elementor-element-708ecd0c elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="708ecd0c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
-                                            <div class="elementor-container elementor-column-gap-no">
-                                                <div class="elementor-row">
-                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1ece98ff wdp-sticky-section-no" data-id="1ece98ff" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div class="elementor-element elementor-element-7100999b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="7100999b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Gui</h2>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-d606483 elementor-mobile-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width wdp-sticky-section-no elementor-widget elementor-widget-icon-list" data-id="d606483" data-element_type="widget" data-widget_type="icon-list.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <ul class="elementor-icon-list-items">
-                                                                            <li class="elementor-icon-list-item">
-                                                                                <a href="https://instagram.com/Guiliano_inst/">
-                                                                                    <span class="elementor-icon-list-icon">
-                                                                                        <i aria-hidden="true" class="fab fa-instagram"></i>
-                                                                                    </span>
-                                                                                    <span class="elementor-icon-list-text">@Guiliano_inst</span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-422f2580 wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="422f2580" data-element_type="widget" data-widget_type="heading.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Guiliano Permadi, S.H, M.H</h2>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="elementor-element elementor-element-4afe74f0 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="4afe74f0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">
-                                                                            Putra Pertama dari<br>Bpk Ir.H. Ahmad Poli &Ibu H. Yuliani
-                                                                        </h2>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-87bd471 wdp-sticky-section-no" data-id="87bd471" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                    <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-bf2623e wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="bf2623e" data-element_type="widget" data-widget_type="spacer.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-spacer">
-                                                    <div class="elementor-spacer-inner"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-18aa3392 e-transform wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="18aa3392" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Groom</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-6b9f57e wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="6b9f57e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">The</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-74304030 wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="74304030" data-element_type="widget" data-widget_type="spacer.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-spacer">
-                                                    <div class="elementor-spacer-inner"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+?>
 
                 <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-659fea43 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="659fea43" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
@@ -828,186 +722,37 @@
                                                 <div class="pp-image-gallery-container" data-settings="{&quot;tilt_enable&quot;:&quot;no&quot;,&quot;layout&quot;:&quot;justified&quot;,&quot;image_spacing&quot;:10,&quot;row_height&quot;:206,&quot;last_row&quot;:&quot;justify&quot;,&quot;post_id&quot;:99779,&quot;template_id&quot;:99779,&quot;widget_id&quot;:&quot;555e5eeb&quot;}">
                                                     <div class="pp-image-gallery-wrapper">
                                                         <div class="pp-image-gallery pp-elementor-grid pp-image-gallery-justified" id="pp-image-gallery-555e5eeb">
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99793">
+
+
+
+                                                        <?php
+                                                            foreach($gallery->result() as $rw){
+                                                                $thumb_img_name = $myHelpers->global_lib->get_image_type($rw->image_path, $rw->org);
+                                                        ?>
+
+                                                            <?php if(!empty($thumb_img_name)){ ?>
+
+                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="<?php echo $thumb_img_name ?>">
                                                                 <div class="pp-grid-item pp-image">
                                                                     <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI13.jpg"></a>
+                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="<?php echo $thumb_img_name ?>" class="elementor-clickable pp-image-gallery-item-link"
+                                                                            href="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>"></a>
                                                                         <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI13.jpg" alt="" data-no-lazy="1"/>
+                                                                            <img decoding="async" class="pp-gallery-slide-image" src="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>" alt="" data-no-lazy="1"/>
                                                                         </div>
                                                                         <div class="pp-image-overlay pp-media-overlay"></div>
                                                                         <div class="pp-gallery-image-content pp-media-content"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99791">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI11.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI11.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99792">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI12.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI12.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99780">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/COVER-HILDA-GUI.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/COVER-HILDA-GUI.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99786">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI6.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI6.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99788">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI8.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI8.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99790">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI10.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI10.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99782">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI2.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI2.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99781">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI1.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI1.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99783">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI3.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI3.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99784">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI4.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI4.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99795">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI15.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI15.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99796">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI16.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI16.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99797">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI17.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI17.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="99794">
-                                                                <div class="pp-grid-item pp-image">
-                                                                    <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link" href="wp-content/uploads/2023/08/HILDA-GUI14.jpg"></a>
-                                                                        <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
-                                                                            <img decoding="async" class="pp-gallery-slide-image" src="wp-content/uploads/2023/08/HILDA-GUI14.jpg" alt="" data-no-lazy="1"/>
-                                                                        </div>
-                                                                        <div class="pp-image-overlay pp-media-overlay"></div>
-                                                                        <div class="pp-gallery-image-content pp-media-content"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
+                                                            <?php } ?>
+
+                                                        <?php } ?>
+
+
+
+
                                                         </div>
                                                     </div>
                                                 </div>

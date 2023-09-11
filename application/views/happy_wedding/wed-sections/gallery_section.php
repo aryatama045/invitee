@@ -3,9 +3,9 @@ global $settings;
 
 if(!isset($wedding_id)) return false;
 
-$gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.image_name as med,wg1.image_path from wedding_gallery wg1 INNER JOIN wedding_gallery wg2 on wg2.parent_image_id = wg1.image_id and wg2.image_type = 'medium' WHERE wg1.image_type='original'
-and wg2.wedding_id=$wedding_id
-");
+$gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.image_name as med,wg1.image_path
+from wedding_gallery wg1 INNER JOIN wedding_gallery wg2 on wg2.parent_image_id = wg1.image_id and wg2.image_type = 'medium' WHERE wg1.image_type='original'
+and wg2.wedding_id=$wedding_id ");
 if(isset($gallery) && $gallery->num_rows() > 0){ ?> 
 <section class="gallery-section section-padding" id="gallery">
 	<div class="container">

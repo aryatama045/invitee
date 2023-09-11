@@ -246,5 +246,16 @@
 		$config ['sidebar_left'] [125] ['item']  [] = array( 	'class' => 'friendslist',  'method'=> 'add_new',
 													'text'=> 'Add New', 'link'=> 'friendslist/add_new',		
 													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
-												
-			
+
+
+		$config ['sidebar_left'] [4545]  = array( 	'class' => 'quote',  'method'=> '',
+		'text'=> 'Quote', 'link'=> '#',
+		'collapse_class'=> 'fa fa-angle-left pull-right', 'icon_class'=> 'fa fa-sliders' );
+
+		$config ['sidebar_left'] [4545] ['item']  [] = array('class' => 'quote',  'method'=> 'manage',
+													'text'=> 'Manage', 'link'=> 'quote/manage',
+													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
+
+		$config ['sidebar_left'] [4545] ['item']  [] = array( 	'class' => 'quote',  'method'=> 'add_new',
+													'text'=> 'Add New', 'link'=> 'quote/add_new',
+													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);

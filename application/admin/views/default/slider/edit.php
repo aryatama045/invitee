@@ -67,20 +67,35 @@ $row = $query->row();
 										</div>
 							</div>
 					</div>
-				
+
 					<div class="col-md-12">
 						<div class="form-group">
-						  <label for="order"><?php echo mlx_get_lang('Order'); ?> <span class="required">*</span></label>
-						  <input type="number" class="form-control"  name="img_order" id="img_order"  required
-						  value="<?php if(isset($_POST['img_order'])) echo $_POST['img_order']; else echo $row->img_order; ?>">
+							<label for="place">Placement <span class="required">*</span></label>
+							<select class="form-control" id="place" name="place" style="width: 100%" required>
+								<option value="<?php if(isset($_POST['place'])) echo $_POST['place']; else echo $row->place; ?>"><?php if(isset($_POST['place'])) echo $_POST['place']; else echo '-- Selected '.$row->place.' --'; ?></option>
+
+								<option value="cover">Cover</option>
+								<option value="opening">Opening</option>
+								<option value="ourlove">Our Love</option>
+								<option value="filterig">Filter IG</option>
+								<option value="footer">Footer</option>
+							</select>
 						</div>
 					</div>
-						
-							
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="order"><?php echo mlx_get_lang('Order'); ?> <span class="required">*</span></label>
+							<input type="number" class="form-control"  name="img_order" id="img_order"  required
+							value="<?php if(isset($_POST['img_order'])) echo $_POST['img_order']; else echo $row->img_order; ?>">
+						</div>
 					</div>
-						
-				</div>	
-					
+
+
+					</div>
+
+				</div>
+
 			<div>
                     
                   </div>

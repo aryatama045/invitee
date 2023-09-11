@@ -3,8 +3,8 @@
 <?php $user_type = $this->session->userdata('user_type'); ?>
 <div class="content-wrapper">
 	<section class="content-header">
-	  <h1 class="page-title"><i class="fa fa-dashboard"></i> <?php echo mlx_get_lang('Dashboard'); ?></h1>
-	  <?php if(isset($_SESSION['msg']) && !empty($_SESSION['msg']))
+	<h1 class="page-title"><i class="fa fa-dashboard"></i> <?php echo mlx_get_lang('Dashboard'); ?></h1>
+	<?php if(isset($_SESSION['msg']) && !empty($_SESSION['msg']))
 			{
 				echo $_SESSION['msg'];
 				unset($_SESSION['msg']);
@@ -31,40 +31,40 @@
 					<div class="box-header with-border">
 						<div class="step-wizard" role="navigation">
 							<div class="progress">
-							  <div class="progressbar empty"></div>
-							  <div id="prog" class="progressbar"></div>
+							<div class="progressbar empty"></div>
+							<div id="prog" class="progressbar"></div>
 							</div>
 							<ul>
-							  <li class="active">
+							<li class="active">
 								<button id="step1">
-								  <div class="step">1</div>
-								  <div class="title">Wedding Information</div>
+								<div class="step">1</div>
+								<div class="title">Wedding Information</div>
 								</button>
-							  </li>
-							  <li class="">
+							</li>
+							<li class="">
 								<button id="step2">
-								  <div class="step">2</div>
-								  <div class="title">Groom Information</div>
+								<div class="step">2</div>
+								<div class="title">Groom Information</div>
 								</button>
-							  </li>
-							  <li class="">
+							</li>
+							<li class="">
 								<button id="step3">
-								  <div class="step">3</div>
-								  <div class="title">Bride Details</div>
+								<div class="step">3</div>
+								<div class="title">Bride Details</div>
 								</button>
-							  </li>
-							  <li class="">
+							</li>
+							<li class="">
 								<button id="step4">
-								  <div class="step">4</div>
-								  <div class="title">Wedding Details</div>
+								<div class="step">4</div>
+								<div class="title">Wedding Details</div>
 								</button>
-							  </li>
-							  <li class="">
+							</li>
+							<li class="">
 								<button id="step5">
-								  <div class="step">5</div>
-								  <div class="title">Complete Setup</div>
+								<div class="step">5</div>
+								<div class="title">Complete Setup</div>
 								</button>
-							  </li>
+							</li>
 							</ul>
 						</div>
 					</div>
@@ -92,14 +92,14 @@
 												&nbsp;&nbsp;- weds -&nbsp;&nbsp;
 											</div>
 											<input type="text" class="form-control site_name_post" value="<?php if(isset($row)) echo $site_name_post; ?>">
-										  <input type="hidden"  class="form-control" name="site_name" value="<?php if(isset($row)) echo $row->site_name; ?>" />
+										<input type="hidden"  class="form-control" name="site_name" value="<?php if(isset($row)) echo $row->site_name; ?>" />
 										</div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										  <label for="wedding_title" >Wedding Title</label>
-										  <input type="text"  class="form-control " id="wedding_title" name="wed_title" value="<?php if(isset($row)) echo $row->wedding_title; ?>"/>							  
+										<label for="wedding_title" >Wedding Title</label>
+										<input type="text"  class="form-control " id="wedding_title" name="wed_title" value="<?php if(isset($row)) echo $row->wedding_title; ?>"/>							  
 									</div>
 								</div>
 								
@@ -111,9 +111,9 @@
 										<label for="wedding_date" >Wedding Date</label>
 										<div class="input-group bootstrap-timepicker timepicker">
 											<div class="input-group-addon">
-											  <i class="fa fa-calendar"></i>
+											<i class="fa fa-calendar"></i>
 											</div>  
-										  <input type="text" autocomplete="off" class="form-control datepicker_elem" id="wedding_date" name="wed_date" value="<?php if(isset($row)) echo date('m/d/Y',$row->wedding_date); else echo date('m/d/Y');  ?>" />							  
+										<input type="text" autocomplete="off" class="form-control datepicker_elem" id="wedding_date" name="wed_date" value="<?php if(isset($row)) echo date('m/d/Y',$row->wedding_date); else echo date('m/d/Y');  ?>" />							  
 										</div>
 									</div>
 								</div>
@@ -123,7 +123,7 @@
 										<label for="wedding_time" >Wedding Time</label>
 										<div class="input-group bootstrap-timepicker timepicker">
 											<div class="input-group-addon">
-											  <i class="fa fa-clock-o"></i>
+											<i class="fa fa-clock-o"></i>
 											</div>
 											<input type="text" class="form-control timepicker_elem" name="wedding_time" id="wedding_time" value="<?php if(isset($row)) echo $row->wedding_time; ?>">
 										</div>
@@ -134,12 +134,12 @@
 								
 								<div class="col-md-6">
 									<div class="form-group">
-										  <label for="wedding_venue" >Wedding Venue</label>
+										<label for="wedding_venue" >Wedding Venue</label>
 										<div class="input-group bootstrap-timepicker timepicker">
 											<div class="input-group-addon">
-											  <i class="fa fa-map-marker"></i>
+											<i class="fa fa-map-marker"></i>
 											</div>
-										  <input type="text"  class="form-control" id="wedding_venue" name="wedding_venue" value="<?php if(isset($row)) echo $row->wedding_venue; ?>"/>							  
+										<input type="text"  class="form-control" id="wedding_venue" name="wedding_venue" value="<?php if(isset($row)) echo $row->wedding_venue; ?>"/>							  
 										</div>
 									</div>
 								</div>
@@ -157,12 +157,12 @@
 								
 								<div class="col-md-6">
 									<div class="form-group">
-										  <label for="wedding_status">Wedding Status</label>
-										  <select  class="form-control select2_elem" id="wedding_status" name="wedding_status"/>
+										<label for="wedding_status">Wedding Status</label>
+										<select  class="form-control select2_elem" id="wedding_status" name="wedding_status"/>
 											<option value="Getting-Married" <?php if(isset($row->wedding_status) && $row->wedding_status == 'Getting-Married') echo 'selected="selected"'; ?>>Getting Married</option>
 											<option value="Got-Married" <?php if(isset($row->wedding_status) && $row->wedding_status == 'Got-Married') echo 'selected="selected"'; ?>>Got Married</option>
 										</select> 
-										  
+										
 									</div>
 								</div>
 							</div>
@@ -202,8 +202,8 @@
 								?>
 								
 								<div class="col-md-6">
-									 <div class="form-group pl_image_container">
-									 <label for="groom_image" style="display: block;">Groom Image</label>
+									<div class="form-group pl_image_container">
+									<label for="groom_image" style="display: block;">Groom Image</label>
 								<label class="custom-file-upload" 
 								data-element_column="groom_photo" 
 								data-element_id="<?php if(isset($row->id) && !empty($row->id))  echo $myHelpers->EncryptClientId($row->id);; ?>" 
@@ -287,7 +287,7 @@
 									$bride_photo = $myHelpers->global_lib->get_image_type('../uploads/weddings/',$row->bride_photo,'thumb');
 								?>
 								<div class="col-md-6">
-									 <div class="form-group pl_image_container">
+									<div class="form-group pl_image_container">
 										<label for="bride_image" style="display: block;">Bride Image</label>
 								<label class="custom-file-upload" 
 								data-element_column="bride_photo" 
@@ -327,7 +327,7 @@
 										<div class="input-group">
 											<div class="input-group-addon">
 												<i class="fa fa-<?php echo $k; ?> btn-<?php echo $k; ?>"></i>
-										  </div>
+										</div>
 										<input type="text" class="form-control "  
 										name="bride_links[<?php echo $k; ?>]" autocomplete="off"  	
 										value="<?php if(isset($bride_links) && array_key_exists($k,$bride_links)) echo $bride_links[$k];  ?>"/>
