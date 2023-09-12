@@ -34,7 +34,7 @@ and wg2.wedding_id=$wedding_id ");
                                     </div>
                                 </div>
 
-                                <!-- Youtube Info -->
+                                <!-- Embed Youtube -->
                                 <div class="elementor-element elementor-element-5e738c9 wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="5e738c9" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/3zAMlAq2u2Y&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-wrapper elementor-open-inline">

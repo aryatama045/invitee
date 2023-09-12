@@ -9,6 +9,8 @@ and wg2.wedding_id=$wedding_id ");
 
 ?>
 
+
+                <!-- Akad -->
                 <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-659fea43 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="659fea43" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -18,7 +20,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-560b75fb wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="560b75fb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="wp-content/uploads/2023/08/HILDA-GUI2.jpg" class="attachment-full size-full wp-image-99782" alt="" srcset="wp-content/uploads/2023/08/HILDA-GUI2.jpg 1065w, wp-content/uploads/2023/08/HILDA-GUI2-200x300.jpg 200w, wp-content/uploads/2023/08/HILDA-GUI2-682x1024.jpg 682w, wp-content/uploads/2023/08/HILDA-GUI2-768x1154.jpg 768w, wp-content/uploads/2023/08/HILDA-GUI2-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px"/>
+                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg" class="attachment-full size-full wp-image-99782" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
                                                 </div>
                                             </div>
                                         </div>
@@ -107,6 +109,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Our Love -->
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-42fde6de elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="42fde6de" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99794,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI14.jpg&quot;},{&quot;id&quot;:99795,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI15.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -131,6 +135,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Counter Mid -->
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-4b6bc56a elementor-section-full_width elementor-section-height-min-height elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="4b6bc56a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;790&quot;,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/05\/rose-sage-11.jpg&quot;},{&quot;id&quot;:&quot;791&quot;,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/05\/rose-sage-36.jpg&quot;},{&quot;id&quot;:&quot;792&quot;,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/05\/rose-sage-14.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -213,6 +219,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Resepsi -->
                 <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-4b41f167 elementor-section-height-min-height elementor-section-full_width elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="4b41f167" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -222,7 +230,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-bb889ba wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="bb889ba" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" width="1065" height="1600" src="wp-content/uploads/2023/08/HILDA-GUI17.jpg" class="attachment-full size-full wp-image-99797" alt="" srcset="wp-content/uploads/2023/08/HILDA-GUI17.jpg 1065w, wp-content/uploads/2023/08/HILDA-GUI17-200x300.jpg 200w, wp-content/uploads/2023/08/HILDA-GUI17-682x1024.jpg 682w, wp-content/uploads/2023/08/HILDA-GUI17-768x1154.jpg 768w, wp-content/uploads/2023/08/HILDA-GUI17-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px"/>
+                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg" class="attachment-full size-full wp-image-99782" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
                                                 </div>
                                             </div>
                                         </div>
@@ -306,6 +314,7 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+                <!-- Filter Ig  -->
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-433073e elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="433073e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99790,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI10.jpg&quot;},{&quot;id&quot;:99788,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI8.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -349,6 +358,7 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+                <!-- Gift -->
                 <section data-dce-background-color="#A1887F" class="elementor-section elementor-top-section elementor-element elementor-element-6dad1dd2 elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="6dad1dd2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -576,6 +586,7 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+                <!-- Ucapan -->
                 <section data-dce-background-color="#D7CCC8" class="elementor-section elementor-top-section elementor-element elementor-element-3bbae63a elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="3bbae63a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -585,7 +596,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-2eaa46a2 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="2eaa46a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" width="1065" height="1600" src="wp-content/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="wp-content/uploads/2023/08/HILDA-GUI11.jpg 1065w, wp-content/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, wp-content/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, wp-content/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, wp-content/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px"/>
+                                                    <img decoding="async" width="1065" height="1600" src="https://ts-invitation.com/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="https://ts-invitation.com/uploads/2023/08/HILDA-GUI11.jpg 1065w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -694,6 +705,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Gallery -->
                 <section data-dce-background-color="#EFEBE9" class="elementor-section elementor-top-section elementor-element elementor-element-69af4a69 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="69af4a69" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -710,6 +723,8 @@ and wg2.wedding_id=$wedding_id ");
                                                 <h2 class="elementor-heading-title elementor-size-default">Moment</h2>
                                             </div>
                                         </div>
+
+                                        <!-- Embed Youtube -->
                                         <div class="elementor-element elementor-element-fa2b3fe wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="fa2b3fe" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/a0r3GlaWKn8&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
@@ -717,6 +732,8 @@ and wg2.wedding_id=$wedding_id ");
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- List Gallery -->
                                         <div class="elementor-element elementor-element-555e5eeb pp-ins-normal wdp-sticky-section-no elementor-widget elementor-widget-pp-image-gallery" data-id="555e5eeb" data-element_type="widget" data-widget_type="pp-image-gallery.default">
                                             <div class="elementor-widget-container">
                                                 <div class="pp-image-gallery-container" data-settings="{&quot;tilt_enable&quot;:&quot;no&quot;,&quot;layout&quot;:&quot;justified&quot;,&quot;image_spacing&quot;:10,&quot;row_height&quot;:206,&quot;last_row&quot;:&quot;justify&quot;,&quot;post_id&quot;:99779,&quot;template_id&quot;:99779,&quot;widget_id&quot;:&quot;555e5eeb&quot;}">
@@ -732,10 +749,10 @@ and wg2.wedding_id=$wedding_id ");
 
                                                             <?php if(!empty($thumb_img_name)){ ?>
 
-                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="<?php echo $thumb_img_name ?>">
+                                                            <div class="pp-grid-item-wrap pp-group-1" data-item-id="555e5eeb">
                                                                 <div class="pp-grid-item pp-image">
                                                                     <div class="pp-image-gallery-thumbnail-wrap pp-ins-filter-hover">
-                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="<?php echo $thumb_img_name ?>" class="elementor-clickable pp-image-gallery-item-link"
+                                                                        <a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="555e5eeb" class="elementor-clickable pp-image-gallery-item-link"
                                                                             href="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>"></a>
                                                                         <div class="pp-ins-filter-target pp-image-gallery-thumbnail">
                                                                             <img decoding="async" class="pp-gallery-slide-image" src="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>" alt="" data-no-lazy="1"/>
@@ -766,6 +783,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Covid Info -->
                 <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-17788797 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="17788797" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
@@ -818,7 +837,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
                                                                             <figure class="wp-caption">
-                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="wp-content/uploads/2023/04/04-15-1.png" class="attachment-large size-large wp-image-194" alt="" srcset="wp-content/uploads/2023/04/04-15-1.png 200w, wp-content/uploads/2023/04/04-15-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
+                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="https://ts-invitation.com/uploads/2023/04/04-15-1.png" class="attachment-large size-large wp-image-194" alt="" srcset="https://ts-invitation.com/uploads/2023/04/04-15-1.png 200w, https://ts-invitation.com/uploads/2023/04/04-15-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
                                                                                 <figcaption class="widget-image-caption wp-caption-text">Wear mask</figcaption>
                                                                             </figure>
                                                                         </div>
@@ -834,7 +853,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
                                                                             <figure class="wp-caption">
-                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="wp-content/uploads/2023/04/01-14-1-1.png" class="attachment-large size-large wp-image-195" alt="" srcset="wp-content/uploads/2023/04/01-14-1-1.png 200w, wp-content/uploads/2023/04/01-14-1-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
+                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="https://ts-invitation.com/uploads/2023/04/01-14-1-1.png" class="attachment-large size-large wp-image-195" alt="" srcset="https://ts-invitation.com/uploads/2023/04/01-14-1-1.png 200w, https://ts-invitation.com/uploads/2023/04/01-14-1-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
                                                                                 <figcaption class="widget-image-caption wp-caption-text">Wash your hand</figcaption>
                                                                             </figure>
                                                                         </div>
@@ -850,7 +869,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
                                                                             <figure class="wp-caption">
-                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="wp-content/uploads/2023/04/06-3-1.png" class="attachment-large size-large wp-image-196" alt="" srcset="wp-content/uploads/2023/04/06-3-1.png 200w, wp-content/uploads/2023/04/06-3-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
+                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="https://ts-invitation.com/uploads/2023/04/06-3-1.png" class="attachment-large size-large wp-image-196" alt="" srcset="https://ts-invitation.com/uploads/2023/04/06-3-1.png 200w, https://ts-invitation.com/uploads/2023/04/06-3-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
                                                                                 <figcaption class="widget-image-caption wp-caption-text">Physical distancing</figcaption>
                                                                             </figure>
                                                                         </div>
@@ -866,7 +885,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-image">
                                                                             <figure class="wp-caption">
-                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="wp-content/uploads/2023/04/02-15-1-1.png" class="attachment-large size-large wp-image-197" alt="" srcset="wp-content/uploads/2023/04/02-15-1-1.png 200w, wp-content/uploads/2023/04/02-15-1-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
+                                                                                <img decoding="async" loading="lazy" width="200" height="200" src="https://ts-invitation.com/uploads/2023/04/02-15-1-1.png" class="attachment-large size-large wp-image-197" alt="" srcset="https://ts-invitation.com/uploads/2023/04/02-15-1-1.png 200w, https://ts-invitation.com/uploads/2023/04/02-15-1-1-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px"/>
                                                                                 <figcaption class="widget-image-caption wp-caption-text">Use handsanitizer</figcaption>
                                                                             </figure>
                                                                         </div>
@@ -886,6 +905,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Slider Footer -->
                 <section data-dce-background-overlay-color="#02010100" class="elementor-section elementor-top-section elementor-element elementor-element-782b42cd elementor-section-height-min-height elementor-section-items-bottom elementor-section-boxed elementor-section-height-default wdp-sticky-section-no" data-id="782b42cd" data-element_type="section" 
                 data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99784,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI4.jpg&quot;},{&quot;id&quot;:99792,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI12.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:2000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-background-overlay"></div>
@@ -935,6 +956,8 @@ and wg2.wedding_id=$wedding_id ");
                 </section>
 
 
+
+                <!-- Footer Info -->
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-51b6b6b elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="51b6b6b" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -945,7 +968,7 @@ and wg2.wedding_id=$wedding_id ");
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
                                                     <img decoding="async" loading="lazy" width="1600" height="1600"
-                                                    src="wp-content/uploads/2023/04/TS-Invitation-Rebrand_1-1.png" class="attachment-full size-full wp-image-46" alt=""
+                                                    src="https://ts-invitation.com/uploads/2023/04/TS-Invitation-Rebrand_1-1.png" class="attachment-full size-full wp-image-46" alt=""
                                                     sizes="(max-width: 1600px) 100vw, 1600px"/>
                                                 </div>
                                             </div>
@@ -962,6 +985,9 @@ and wg2.wedding_id=$wedding_id ");
                     </div>
                 </section>
 
+
+
+                <!-- Audio Autoplay -->
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-7b257d67 elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="7b257d67" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -984,13 +1010,15 @@ and wg2.wedding_id=$wedding_id ");
                                                                         </script>
                                                                         <div id="audio-container" class="audio-box">
                                                                             <audio id="song" loop>
-                                                                                <source src="wp-content/uploads/2023/05/y2mate.com-Westlife-Nothings-Going-to-Change-My-Love-For-You-Audio.mp3" type="audio/mp3">
+                                                                                <source src="https://ts-invitation.com/uploads/2023/05/y2mate.com-Westlife-Nothings-Going-to-Change-My-Love-For-You-Audio.mp3" type="audio/mp3">
                                                                             </audio>
-                                                                            <div class="elementor-icon-wrapper" id="unmute-sound" style="display: none;">
+
+                                                                            <div class="elementor-icon-wrapper" id="unmute-sound" style="">
                                                                                 <div class="elementor-icon">
                                                                                     <i aria-hidden="true" class="fas fa-music"></i>
                                                                                 </div>
                                                                             </div>
+
                                                                             <div class="elementor-icon-wrapper" id="mute-sound" style="display: none;">
                                                                                 <div class="elementor-icon">
                                                                                     <i aria-hidden="true" class="fa fa-stop-circle"></i>
@@ -1018,7 +1046,3 @@ and wg2.wedding_id=$wedding_id ");
                         </div>
                     </div>
                 </section>
-            
-            
-            
-            

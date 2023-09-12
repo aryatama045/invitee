@@ -57,6 +57,10 @@
 
 	<?php $this->load->view("$theme/wed-css"); ?>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/@icon/dashicons@0.9.0-alpha.4/dashicons.min.css" rel="stylesheet">
+
 </head>
 
 

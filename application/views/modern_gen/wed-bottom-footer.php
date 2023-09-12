@@ -1,11 +1,18 @@
 
-
+    <?php $this->load->view("$theme/wed-popup"); ?>
 
 
     <!-- <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/fontawesome.min.js" integrity="sha512-KCwrxBJebca0PPOaHELfqGtqkUlFUCuqCnmtydvBSTnJrBirJ55hRG5xcP4R9Rdx9Fz9IF3Yw6Rx40uhuAHR8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js" integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/v4-shims.min.js" integrity="sha512-1ND726aZWs77iIUxmOoCUGluOmCT9apImcOVOcDCOSVAUxk3ZSJcuGsHoJ+i4wIOhXieZZx6rY9s6i5xEy1RPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script>	
     <script id="generate-a11y">
@@ -60,7 +67,7 @@
 
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-includes/js/comment-reply.min9b30.js?ver=6.3.1' id='comment-reply-js'></script>
     <script id='happy-elementor-addons-js-extra'>
-    var HappyLocalize = {"ajax_url":"https:\/\/ts-invitation.com\/wp-admin\/admin-ajax.php","nonce":"26ca254ca6","pdf_js_lib":"https:\/\/ts-invitation.com\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"};
+    var HappyLocalize = {"ajax_url":"<?= base_url('template/'.$theme.'/') ?>wp-admin\/admin-ajax.php","nonce":"26ca254ca6","pdf_js_lib":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"};
     </script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/happy-elementor-addons/assets/js/happy-addons.min688f.js?ver=3.8.4' id='happy-elementor-addons-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min3958.js?ver=0.2.1' id='jquery-numerator-js'></script>
@@ -102,8 +109,8 @@
     wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
     </script>
     <script id="elementor-pro-frontend-js-before">
-    var ElementorProFrontendConfig = {"nonce":"66fd923119","urls":{"assets":"https:\/\/ts-invitation.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/ts-invitation.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},
-    "whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ts-invitation.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+    var ElementorProFrontendConfig = {"nonce":"66fd923119","urls":{"assets":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/elementor-pro\/assets\/","rest":"<?= base_url('template/'.$theme.'/') ?>wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},
+    "whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
     </script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor-pro/assets/js/frontend.min0fca.js?ver=3.12.3' id='elementor-pro-frontend-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2' id='elementor-waypoints-js'></script>
@@ -120,17 +127,17 @@
     "mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},
     "tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},
     "widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.12.2","is_static":false,"experimentalFeatures":{"theme_builder_v2":true,"landing-pages":true,"page-transitions":true,"notes":true,"loop":true,"form-submissions":true,"e_scroll_snap":true},
-    "urls":{"assets":"https:\/\/ts-invitation.com\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes",
+    "urls":{"assets":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[],"dynamicooo":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes",
     "lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":99779,
-    "title":"The%20Wedding%20of%20Hilda%20%26%20Gui%20-%20TS%20Invitation","excerpt":"","featuredImage":"https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/COVER-HILDA-GUI-682x1024.jpg"}};
+    "title":"The%20Wedding%20of%20Hilda%20%26%20Gui%20-%20TS%20Invitation","excerpt":"","featuredImage":"<?= base_url('template/'.$theme.'/') ?>wp-content\/uploads\/2023\/08\/COVER-HILDA-GUI-682x1024.jpg"}};
     </script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor/assets/js/frontend.mine56c.js' id='elementor-frontend-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min0fca.js?ver=3.12.3' id='pro-preloaded-elements-handlers-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor/assets/js/preloaded-modules.mine56c.js' id='preloaded-modules-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min0fca.js?ver=3.12.3' id='e-sticky-js'></script>
-    <!-- <script id='weddingpress-wdp-js-extra'>
-    var cevar = {"ajax_url":"https:\/\/ts-invitation.com\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/ts-invitation.com\/wp-content\/plugins\/elkit\/"};
-    </script> -->
+    <script id='weddingpress-wdp-js-extra'>
+    var cevar = {"plugin_url":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/elkit\/"};
+    </script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/wdp.min5d0a.js?ver=2.0.7' id='weddingpress-wdp-js'></script>
     <!-- <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/guest-form5d0a.js?ver=2.0.7' id='kirim-kit-js'></script> -->
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/powerpack-elements/assets/lib/tooltipster/tooltipster.min47cd.js?ver=2.9.17' id='pp-tooltipster-js'></script>
