@@ -7,6 +7,10 @@ $gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.im
 from wedding_gallery wg1 INNER JOIN wedding_gallery wg2 on wg2.parent_image_id = wg1.image_id and wg2.image_type = 'medium' WHERE wg1.image_type='original'
 and wg2.wedding_id=$wedding_id ");
 
+$kutipan_opening = $this->Common_model->commonQuery("select * from wedding_kutipan Where wedding_id = $wedding_id AND place LIKE '%opening%' ")->row_array();
+
+
+
 ?>
 
 
@@ -22,17 +26,11 @@ and wg2.wedding_id=$wedding_id ");
                                 <div class="elementor-element elementor-element-98b3442 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="98b3442" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <h2 class="elementor-heading-title elementor-size-default">
-                                            <?php echo $couple->row()->bride_short_description ?>
+                                            <?php echo $kutipan_opening['kutipan'] ?>
                                         </h2>
                                     </div>
                                 </div>
-                                <div class="elementor-element elementor-element-777b404d wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="777b404d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">
-                                            <?php echo $couple->row()->bride_signature ?>
-                                        </h2>
-                                    </div>
-                                </div>
+                                
 
                                 <!-- Embed Youtube -->
                                 <div class="elementor-element elementor-element-5e738c9 wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="5e738c9" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/3zAMlAq2u2Y&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
@@ -54,9 +52,9 @@ and wg2.wedding_id=$wedding_id ");
                                             ?>
 
                                             <?php if(!empty($thumb_img_name)){ ?>
-                                                <div class="swiper-slide">
+                                                <div class="swiper-slide" style="width: 323.5px; margin-right: 5px;">
                                                     <figure class="swiper-slide-inner">
-                                                        <img decoding="async" class="swiper-slide-image"
+                                                        <img decoding="async" class="swiper-slide-image" style="width: 323.5px; margin-right: 5px;"
                                                         src="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>" alt="<?php echo $thumb_img_name ?>"/>
                                                     </figure>
                                                 </div>
@@ -116,7 +114,7 @@ and wg2.wedding_id=$wedding_id ");
                         </div>
                     </div>
                     <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-66997293 wdp-sticky-section-no" data-id="66997293" data-element_type="column"
-                    data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99785,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+                    data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
                         <div class="elementor-column-wrap elementor-element-populated">
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-5efcb30b wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="5efcb30b" data-element_type="widget" data-widget_type="spacer.default">
@@ -172,6 +170,7 @@ and wg2.wedding_id=$wedding_id ");
                                                     </div>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </section>
@@ -206,7 +205,8 @@ and wg2.wedding_id=$wedding_id ");
             <div class="elementor-background-overlay"></div>
             <div class="elementor-container elementor-column-gap-no">
                 <div class="elementor-row">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36dd1671 wdp-sticky-section-no" data-id="36dd1671" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99789,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36dd1671 wdp-sticky-section-no" data-id="36dd1671" data-element_type="column" 
+                        data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
                         <div class="elementor-column-wrap elementor-element-populated">
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-7b15863b wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="7b15863b" data-element_type="widget" data-widget_type="spacer.default">

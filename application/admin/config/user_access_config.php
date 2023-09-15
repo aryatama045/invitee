@@ -11,7 +11,7 @@ array(
 		"admin" => 
 		array(	
 			"menu" => array( "has_access" => "exclude",
-							"menu_items" => array("story","event","slider","quote","guestbook",
+							"menu_items" => array("story","event","slider","kutipan","utility","guestbook",
 							"gifts||my_gifts","packages||my_payments",
 							"relatives","received_gifts","friendslist")
 							),
@@ -56,10 +56,16 @@ array(
 					"slider||edit",
 					"slider||manage",
 
-					"quote",
-					"quote||add_new",
-					"quote||edit",
-					"quote||manage",
+					"kutipan",
+					"kutipan||add_new",
+					"kutipan||edit",
+					"kutipan||manage",
+
+					"utility",
+					"utility||audio",
+					"utility||youtube",
+					"utility||filter_ig",
+					"utility||maps",
 					
 					"guestbook",
 					"guestbook||add_new",
@@ -85,7 +91,7 @@ array(
 				),
 			"controller" => array( 
 				"has_access" => "limited",
-				"all_items"=> array("story","event","slider","quote","guestbook","relatives",'packages',"gallery",
+				"all_items"=> array("story","event","slider","kutipan","utility","guestbook","relatives",'packages',"gallery",
 				/*"gifts",*/
 				"settings","media")
 			),
@@ -96,7 +102,8 @@ array(
 						"story"=>array("manage","add_new","edit","delete"),
 						"event"=>array("manage","add_new","edit","delete"),
 						"slider"=>array("manage","add_new","edit","delete"),
-						"quote"=>array("manage","add_new","edit","delete"),
+						"kutipan"=>array("manage","add_new","edit","delete"),
+						"utility"=>array("manage","add_new","edit","delete"),
 						"guestbook"=>array("manage","add_new","edit","delete"),
 						"relatives"=>array("manage","add_new","edit","relations","delete"),
 						

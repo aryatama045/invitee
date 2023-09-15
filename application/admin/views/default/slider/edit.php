@@ -76,12 +76,14 @@ $row = $query->row();
 
 								<option value="cover">Cover</option>
 								<option value="opening">Opening</option>
-								<option value="ourlove">Our Love</option>
-								<option value="filterig">Filter IG</option>
-								<option value="footer">Footer</option>
+								<option value="our-love">Our Love</option>
+								<option value="filter-ig">Filter IG</option>
+								<option value="wedding-gifts">Wedding Gifts</option>
 							</select>
 						</div>
 					</div>
+
+					
 
 					<div class="col-md-12">
 						<div class="form-group">

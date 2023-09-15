@@ -772,7 +772,7 @@
                 $("#loader").css("display", "inline-block");
                 $.ajax({
                     type: "POST",
-                    url: base_url+'ajax/invitationPost',
+                    url: site_url+'/ajax/invitationPost',
                     data: $(form).serialize(),
                     success: function (data) {
                         $( "#loader").hide();

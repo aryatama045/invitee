@@ -58,12 +58,11 @@ $this->load->view("default/header-top");?>
 									<label for="place">Placement <span class="required">*</span></label>
 									<select class="form-control" id="place" name="place" style="width: 100%" required>
 										<option value=""><?php if(isset($_POST['place'])) echo $_POST['place']; else echo '--Pilih Posisi--'; ?></option>
-
 										<option value="cover">Cover</option>
 										<option value="opening">Opening</option>
-										<option value="ourlove">Our Love</option>
-										<option value="filterig">Filter IG</option>
-										<option value="footer">Footer</option>
+										<option value="our-love">Our Love</option>
+										<option value="filter-ig">Filter IG</option>
+										<option value="wedding-gifts">Wedding Gifts</option>
 									</select>
 								</div>
 							</div>

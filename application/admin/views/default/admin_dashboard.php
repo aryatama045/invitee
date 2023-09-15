@@ -19,7 +19,7 @@
 				{
 					foreach($wedding_sites->result() as $row){
 						
-					$wedding_site_url = str_replace('admin/','',base_url()).$row->site_name.'/'.$row->id;	
+					$wedding_site_url = str_replace('admin/','',base_url()).$row->site_name;	
 					
 					
 					$bride_photo = $myHelpers->global_lib->get_image_type('../uploads/weddings/',$row->bride_photo,'thumb');

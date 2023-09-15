@@ -193,6 +193,20 @@
 										<textarea id="groom_short_description" class="form-control on-change-cls" 
 										data-target="groom_short_description_container" name="groom_short_description" rows="3" col="5"><?php if(isset($row)) echo $row->groom_short_description; ?></textarea>
 									</div>
+
+									<div class="social-media-container form-group">
+										<label for="exampleInputFile" style="display: block;">Social Connections</label>
+										<?php  if(isset($social_medias)){ foreach($social_medias as $k=>$v){?>
+											<div class="input-group">
+												<div class="input-group-addon ">
+													<i class="fa fa-<?php echo $k; ?> btn-<?php echo $k; ?>"></i>
+												</div>
+												<input type="text" class="form-control " autocomplete="off"  
+												name="groom_links[<?php echo $k; ?>]" 
+												value="<?php if(isset($groom_links) && array_key_exists($k,$groom_links)) echo $groom_links[$k]; ?>"/>
+											</div>
+										<?php } } ?>
+									</div>
 									
 								</div>
 								
@@ -201,7 +215,7 @@
 									$groom_photo = $myHelpers->global_lib->get_image_type('../uploads/weddings/',$row->groom_photo,'thumb');
 								?>
 								
-								<div class="col-md-6">
+							<div class="col-md-6">
 									<div class="form-group pl_image_container">
 									<label for="groom_image" style="display: block;">Groom Image</label>
 								<label class="custom-file-upload" 
@@ -228,26 +242,43 @@
 								<?php } ?>
 								<input type="hidden" name="groom_photo" value="<?php if(isset($groom_photo) && !empty($groom_photo)) { echo $row->groom_photo;}?>" 
 								class="pl_file_hidden">
-							</div>
-									
-									<div class="social-media-container form-group">
-										<label for="exampleInputFile" style="display: block;">Social Connections</label>
-									<?php 
-						//print_r($groom_links);			
-									if(isset($social_medias)){
-									foreach($social_medias as $k=>$v){?>
-										<div class="input-group">
-											<div class="input-group-addon ">
-												<i class="fa fa-<?php echo $k; ?> btn-<?php echo $k; ?>"></i>
-											</div>
-											<input type="text" class="form-control " autocomplete="off"  
-											name="groom_links[<?php echo $k; ?>]" 
-											value="<?php if(isset($groom_links) && array_key_exists($k,$groom_links)) echo $groom_links[$k]; ?>"/>
-										</div>
-									<?php }
-									}
-									?>
+								</div>
+								
+								<?php 
+								if(isset($row))
+									$groom_photo_bg = $myHelpers->global_lib->get_image_type('../uploads/weddings/',$row->groom_photo_bg,'thumb');
+								?>
+
+								<hr>
+									<div class="form-group pl_image_container">
+											<label for="groom_photo_bg" style="display: block;">Groom Image Background</label>
+										<label class="custom-file-upload" 
+										data-element_column="groom_photo_bg" 
+										data-element_id="<?php if(isset($row->id) && !empty($row->id))  echo $myHelpers->EncryptClientId($row->id);; ?>" 
+										data-type="weddings" id="pl_file_uploader_12" 
+										<?php if(isset($groom_photo_bg) && !empty($groom_photo_bg)) { echo 'style="display:none;"';}?>>
+											<i class="fa fa-cloud-upload"></i> <?php echo mlx_get_lang('Upload Image'); ?>
+										</label>
+										<progress class="pl_file_progress" value="0" max="100" style="display:none;"></progress>
+										<?php 
+											
+										if(isset($groom_photo_bg) && !empty($groom_photo_bg)) { ?>
+											<a class="pl_file_link" href="<?php echo base_url().'../uploads/weddings/'.$row->groom_photo_bg; ?>" 
+											download="<?php echo $row->groom_photo_bg; ?>" style="">
+												<img src="<?php echo base_url().'../uploads/weddings/'.$groom_photo_bg; ?>" >
+											</a>
+											<a class="pl_file_remove_img" title="Remove Image" href="#"><i class="fa fa-remove"></i></a>
+										<?php }else{ ?>
+											<a class="pl_file_link" href="" download="" style="display:none;">
+												<img src="" >
+											</a>
+											<a class="pl_file_remove_img" title="Remove Image" href="#" style="display:none;"><i class="fa fa-remove"></i></a>
+										<?php } ?>
+										<input type="hidden" name="groom_photo_bg" value="<?php if(isset($groom_photo_bg) && !empty($groom_photo_bg)) { echo $row->groom_photo_bg;}?>" 
+										class="pl_file_hidden">
 									</div>
+									
+									
 								</div>
 								
 							</div>
@@ -279,6 +310,26 @@
 										<textarea class="form-control on-change-cls" id="bride_short_description" 
 										data-target="bride_short_description_container"  name="bride_short_description" rows="3" col="5"><?php  if(isset($row)) echo $row->bride_short_description; ?></textarea>
 									</div>
+
+									<?php if(isset($social_medias)){ ?>
+									<div class="social-media-container form-group">
+										<label for="exampleInputFile" style="display: block;">Social Connections</label>
+										<div class="social-links">
+										<?php 
+										
+											foreach($social_medias as $k=>$v){?>
+										<div class="input-group">
+											<div class="input-group-addon">
+												<i class="fa fa-<?php echo $k; ?> btn-<?php echo $k; ?>"></i>
+										</div>
+										<input type="text" class="form-control "  
+										name="bride_links[<?php echo $k; ?>]" autocomplete="off"  	
+										value="<?php if(isset($bride_links) && array_key_exists($k,$bride_links)) echo $bride_links[$k];  ?>"/>
+										</div>
+										<?php }	?>
+										</div>
+									</div>
+									<?php }	?>
 									
 								</div>
 								
@@ -314,31 +365,50 @@
 								<?php } ?>
 								<input type="hidden" name="bride_photo" value="<?php if(isset($bride_photo) && !empty($bride_photo)) { echo $row->bride_photo;}?>" 
 								class="pl_file_hidden">
+
+								</div>
 								
-								
-									</div>
-								<?php if(isset($social_medias)){ ?>
-									<div class="social-media-container form-group">
-										<label for="exampleInputFile" style="display: block;">Social Connections</label>
-										<div class="social-links">
+								<hr>
+
+								<?php 
+								if(isset($row))
+									$bride_photo_bg = $myHelpers->global_lib->get_image_type('../uploads/weddings/',$row->bride_photo_bg,'thumb');
+								?>
+									<div class="form-group pl_image_container">
+										<label for="bride_photo_bg" style="display: block;">Bride Image Background</label>
+										<label class="custom-file-upload" 
+										data-element_column="bride_photo_bg" 
+										data-element_id="<?php if(isset($row->id) && !empty($row->id))  echo $myHelpers->EncryptClientId($row->id);; ?>" 
+										data-type="weddings" id="pl_file_uploader_22" 
+										<?php if(isset($bride_photo_bg) && !empty($bride_photo_bg)) { echo 'style="display:none;"';}?>>
+											<i class="fa fa-cloud-upload"></i> <?php echo mlx_get_lang('Upload Image'); ?>
+										</label>
+										<progress class="pl_file_progress" value="0" max="100" style="display:none;"></progress>
 										<?php 
-										
-											foreach($social_medias as $k=>$v){?>
-										<div class="input-group">
-											<div class="input-group-addon">
-												<i class="fa fa-<?php echo $k; ?> btn-<?php echo $k; ?>"></i>
-										</div>
-										<input type="text" class="form-control "  
-										name="bride_links[<?php echo $k; ?>]" autocomplete="off"  	
-										value="<?php if(isset($bride_links) && array_key_exists($k,$bride_links)) echo $bride_links[$k];  ?>"/>
-										</div>
-										<?php }	?>
-										</div>
+											
+										if(isset($bride_photo_bg) && !empty($bride_photo_bg)) { ?>
+											<a class="pl_file_link" href="<?php echo base_url().'../uploads/weddings/'.$row->bride_photo_bg; ?>" 
+											download="<?php echo $row->bride_photo_bg; ?>" style="">
+												<img src="<?php 
+												echo base_url().'../uploads/weddings/'.$bride_photo_bg; ?>" >
+											</a>
+											<a class="pl_file_remove_img" title="Remove Image" href="#"><i class="fa fa-remove"></i></a>
+										<?php }else{ ?>
+											<a class="pl_file_link" href="" download="" style="display:none;">
+												<img src="" >
+											</a>
+											<a class="pl_file_remove_img" title="Remove Image" href="#" style="display:none;"><i class="fa fa-remove"></i></a>
+										<?php } ?>
+										<input type="hidden" name="bride_photo_bg" value="<?php if(isset($bride_photo_bg) && !empty($bride_photo_bg)) { echo $row->bride_photo_bg;}?>" 
+										class="pl_file_hidden">
+								
+								
 									</div>
-									<?php }	?>
+								
 							</div>
 						</div>
 					</div>	
+
 						<div class="step4 tab-block" style="display:none;">
 							<div class="row">
 								<?php if(isset($row) && $row->wedding_side == 'groom'){?>
@@ -410,7 +480,7 @@
 							<?php if($row->payment_status == 'pending') {?>
 								<p class="text-center lead fill-form-block" <?php if(!$all_set) echo 'style="display:none;"'; ?>>Please buy any package to publish your site. <a href="<?php echo base_url(array('packages/my_payments')); ?>">Click Here</a> to select package.</p>
 							<?php }else{ ?>
-								<p class="text-center lead fill-form-block" <?php if(!$all_set) echo 'style="display:none;"'; ?>>All Set Go Ahead. <?php if(isset($row)) { ?> <a href="<?php echo str_replace('admin/','',base_url()).$row->site_name.'/'.$row->id; ?>" target="_blank">Click here</a> <?php } ?> to View Site</p>
+								<p class="text-center lead fill-form-block" <?php if(!$all_set) echo 'style="display:none;"'; ?>>All Set Go Ahead. <?php if(isset($row)) { ?> <a href="<?php echo str_replace('admin/','',base_url()).$row->site_name; ?>" target="_blank">Click here</a> <?php } ?> to View Site</p>
 							<?php } ?>
 							
 							<p class="text-center lead unfill-form-block" <?php if($all_set) echo 'style="display:none;"'; ?>>Please Complete Wedding Details .</p>

@@ -35,6 +35,8 @@
             'use strict';
             $("#wpkoi-elements-countdown-35af9619").countdown();
         });
+
+        
     </script>
 
     <style>
@@ -138,8 +140,8 @@
     <script id='weddingpress-wdp-js-extra'>
     var cevar = {"plugin_url":"<?= base_url('template/'.$theme.'/') ?>wp-content\/plugins\/elkit\/"};
     </script>
-    <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/wdp.min5d0a.js?ver=2.0.7' id='weddingpress-wdp-js'></script>
-    <!-- <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/guest-form5d0a.js?ver=2.0.7' id='kirim-kit-js'></script> -->
+    <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/wdp.min5d0a.js' id='weddingpress-wdp-js'></script>
+    <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/elkit/assets/js/guest-form5d0a.js?ver=2.0.7' id='kirim-kit-js'></script>
     <script src='<?= base_url('template/'.$theme.'/') ?>wp-content/plugins/powerpack-elements/assets/lib/tooltipster/tooltipster.min47cd.js?ver=2.9.17' id='pp-tooltipster-js'></script>
     <style>
         #s_C {
@@ -179,6 +181,21 @@
                 });
             }
         });
+    </script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $(".hide-icon-music").click(function(){
+                $(".hide-icon-music").hide();
+                $(".show-icon-music").show();
+            });
+            $(".show-icon-music").click(function(){
+                $(".hide-icon-music").show();
+                $(".show-icon-music").hide();
+            });
+        });
+
     </script>
 
 

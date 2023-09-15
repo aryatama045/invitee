@@ -7,6 +7,33 @@ $gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.im
 from wedding_gallery wg1 INNER JOIN wedding_gallery wg2 on wg2.parent_image_id = wg1.image_id and wg2.image_type = 'medium' WHERE wg1.image_type='original'
 and wg2.wedding_id=$wedding_id ");
 
+
+$kutipan_ourlove = $this->Common_model->commonQuery("select * from wedding_kutipan Where wedding_id = $wedding_id AND place LIKE '%our-love%' ")->row_array();
+
+$kutipan_filterig = $this->Common_model->commonQuery("select * from wedding_kutipan Where wedding_id = $wedding_id AND place LIKE '%filter-ig%' ")->row_array();
+
+$kutipan_weeding_gifts = $this->Common_model->commonQuery("select * from wedding_kutipan Where wedding_id = $wedding_id AND place LIKE '%wedding-gifts%' ")->row_array();
+
+$akad = $this->Common_model->commonQuery("select * from wedding_event Where wedding_user_id = $wedding_user_id AND event_place LIKE '%akad%' ")->row_array();
+
+$resepsi = $this->Common_model->commonQuery("select * from wedding_event Where wedding_user_id = $wedding_user_id AND event_place LIKE '%resepsi%' ")->row_array();
+
+
+
+$img_our_love1 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%our-love%' order by img_order asc ")->row_array();
+
+$img_our_love2 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%our-love%' order by img_order desc ")->row_array();
+
+
+$img_filterig1 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%filter-ig%' order by img_order asc ")->row_array();
+
+$img_filterig2 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%filter-ig%' order by img_order desc ")->row_array();
+
+
+$wedding_gifts1 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%wedding-gifts%' order by img_order asc ")->row_array();
+
+$wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%wedding-gifts%' order by img_order desc ")->row_array();
+
 ?>
 
 
@@ -20,7 +47,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-560b75fb wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="560b75fb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg" class="attachment-full size-full wp-image-99782" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
+                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="<?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?>" class="attachment-full size-full wp-image-99782" alt="" srcset="<?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?> 1065w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?> 200w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?> 682w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?> 768w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$akad['event_image']) ?> 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
                                                 </div>
                                             </div>
                                         </div>
@@ -48,7 +75,7 @@ and wg2.wedding_id=$wedding_id ");
                                                             <div class="elementor-widget-wrap">
                                                                 <div class="elementor-element elementor-element-5caa01b5 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="5caa01b5" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Sabtu</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default"><?php echo tanggal(date('D',$akad['event_date'])) ?></h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-7dc54eaf wdp-sticky-section-no elementor-widget elementor-widget-counter" data-id="7dc54eaf" data-element_type="widget" data-widget_type="counter.default">
@@ -56,7 +83,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                         <div class="elementor-counter">
                                                                             <div class="elementor-counter-number-wrapper">
                                                                                 <span class="elementor-counter-number-prefix"></span>
-                                                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="9" data-from-value="30" data-delimiter=",">30</span>
+                                                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="<?php echo date('d',$akad['event_date']) ?>" data-from-value="30" data-delimiter=",">30</span>
                                                                                 <span class="elementor-counter-number-suffix"></span>
                                                                             </div>
                                                                         </div>
@@ -64,12 +91,12 @@ and wg2.wedding_id=$wedding_id ");
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-1860bbf0 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="1860bbf0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">September 2023</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default"> <?php echo date('M',$akad['event_date']); ?> <?php echo date('Y',$akad['event_date']); ?></h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-1c029d7a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="1c029d7a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Pukul 09.00 WIB sd selesai</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">Pukul 12.00 WIB sd selesai</h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-bf5db wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="bf5db" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
@@ -108,10 +135,10 @@ and wg2.wedding_id=$wedding_id ");
                     </div>
                 </section>
 
-
-
+                
                 <!-- Our Love -->
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-42fde6de elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="42fde6de" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99794,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI14.jpg&quot;},{&quot;id&quot;:99795,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI15.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-42fde6de elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="42fde6de" data-element_type="section" 
+                    data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99794,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$img_our_love1['slide_img'] ?>&quot;},{&quot;id&quot;:99795,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$img_our_love2['slide_img'] ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
                             <div data-dce-background-color="#0201011C" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-417edc10 wdp-sticky-section-no" data-id="417edc10" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -124,7 +151,9 @@ and wg2.wedding_id=$wedding_id ");
                                         </div>
                                         <div class="elementor-element elementor-element-4859dfbe wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="4859dfbe" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">"Pernikahan adalah ibadah, dan setiap ibadah bermuara pada cinta-Nya sebagai tujuan. Sudah sewajarnya setiap upaya meraih cinta-Nya dilakukan dengan sukacita."</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    <?php echo $kutipan_ourlove['kutipan']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
@@ -230,7 +259,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-bb889ba wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="bb889ba" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg" class="attachment-full size-full wp-image-99782" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI2-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
+                                                    <img decoding="async" fetchpriority="high" width="1065" height="1600" src="<?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?>" class="attachment-full size-full wp-image-99782" alt="" srcset="<?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?> 1065w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?> 200w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?> 682w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?> 768w, <?php echo str_replace('/', '\\/', base_url().'uploads/event/'.$resepsi['event_image']) ?> 1022w" sizes="(max-width: 1065px) 100vw, 1065px">
                                                 </div>
                                             </div>
                                         </div>
@@ -315,7 +344,8 @@ and wg2.wedding_id=$wedding_id ");
 
 
                 <!-- Filter Ig  -->
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-433073e elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="433073e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99790,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI10.jpg&quot;},{&quot;id&quot;:99788,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI8.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-433073e elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle wdp-sticky-section-no" data-id="433073e"
+                    data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99790,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$img_filterig1['slide_img'] ?>&quot;},{&quot;id&quot;:99788,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$img_filterig2['slide_img'] ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:1000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
                             <div data-dce-background-color="#02010154" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ef2e126 wdp-sticky-section-no" data-id="ef2e126" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -328,14 +358,16 @@ and wg2.wedding_id=$wedding_id ");
                                         </div>
                                         <div class="elementor-element elementor-element-f12971d wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="f12971d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Meriahkan acara pernikahan kami dengan menggunakan filter Instagram &hashtag</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    <?php echo $kutipan_filterig['kutipan'] ?>
+                                                </h2>
                                             </div>
                                         </div>
-                                        <div class="elementor-element elementor-element-8a861ce wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="8a861ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                        <!-- <div class="elementor-element elementor-element-8a861ce wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="8a861ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">#GUIdeHILDAforever</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">#tags</h2>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div data-dce-background-color="#00000054" class="elementor-element elementor-element-4fac669 elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-button" data-id="4fac669" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
@@ -377,7 +409,9 @@ and wg2.wedding_id=$wedding_id ");
                                         </div>
                                         <div class="elementor-element elementor-element-5fd57602 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="5fd57602" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Kehadiran dan doa Anda akan menjadi hadiah pernikahan terbesar yang pernah kami terima. Tidak ada hadiah lain yang dibutuhkan atau diharapkan. Namun, jika memberi adalah tanda kasih, kami senang menerimanya dan tentunya akan semakin melengkapi kebahagiaan kami.</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    <?php echo $kutipan_weeding_gifts['kutipan']; ?>
+                                                </h2>
                                             </div>
                                         </div>
                                         <section class="elementor-section elementor-inner-section elementor-element elementor-element-6e37313e elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="6e37313e" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
@@ -454,8 +488,7 @@ and wg2.wedding_id=$wedding_id ");
                                                                         <div class="fluentform-widget-wrapper fluentform-widget-custom-radio-checkbox fluentform-widget-align-default">
                                                                             <div class='fluentform fluentform_wrapper_1359'>
                                                                                 <form data-form_id="1359" id="fluentform_1359" class="frm-fluent-form fluent_form_1359 ff-el-form-top ff_form_instance_1359_1 ff-form-loading" data-form_instance="ff_form_instance_1359_1" method="POST">
-                                                                                    <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;
-                                box-shadow: none!important;outline: none!important;">
+                                                                                    <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important;">
                                                                                         <legend class="ff_screen_reader_title" style="margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;">Hilda &Gui</legend>
                                                                                         <input type='hidden' name='__fluent_form_embded_post_id' value='99779'/>
                                                                                         <input type="hidden" id="_fluentform_1359_fluentformnonce" name="_fluentform_1359_fluentformnonce" value="33c129ca12"/>
@@ -596,8 +629,7 @@ and wg2.wedding_id=$wedding_id ");
                                         <div class="elementor-element elementor-element-2eaa46a2 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="2eaa46a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
-                                                    <img decoding="async" width="1065" height="1600" src="https://ts-invitation.com/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="https://ts-invitation.com/uploads/2023/08/HILDA-GUI11.jpg 1065w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, https://ts-invitation.com/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px"/>
-                                                </div>
+                                                <img decoding="async" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">                                                </div>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-66db6653 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="66db6653" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
@@ -908,7 +940,7 @@ and wg2.wedding_id=$wedding_id ");
 
                 <!-- Slider Footer -->
                 <section data-dce-background-overlay-color="#02010100" class="elementor-section elementor-top-section elementor-element elementor-element-782b42cd elementor-section-height-min-height elementor-section-items-bottom elementor-section-boxed elementor-section-height-default wdp-sticky-section-no" data-id="782b42cd" data-element_type="section" 
-                data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99784,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI4.jpg&quot;},{&quot;id&quot;:99792,&quot;url&quot;:&quot;https:\/\/ts-invitation.com\/wp-content\/uploads\/2023\/08\/HILDA-GUI12.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:2000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
+                data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:99784,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$wedding_gifts1['slide_img'] ?>&quot;},{&quot;id&quot;:99792,&quot;url&quot;:&quot;<?php echo base_url('uploads/slider/').$wedding_gifts2['slide_img'] ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:2000,&quot;background_slideshow_transition_duration&quot;:2000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-background-overlay"></div>
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -933,12 +965,12 @@ and wg2.wedding_id=$wedding_id ");
                                         </div>
                                         <div class="elementor-element elementor-element-3df1065 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3df1065" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Hilda &Gui</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default"><?php echo $info->wedding_title ?></h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-a152833 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="a152833" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">#GUIdeHILDAforever</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default"></h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-7f9e3ea8 wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="7f9e3ea8" data-element_type="widget" data-widget_type="spacer.default">
@@ -1008,22 +1040,27 @@ and wg2.wedding_id=$wedding_id ");
                                                                             var settingAutoplay = 'yes';
                                                                             window.settingAutoplay = settingAutoplay === 'disable' ? false : true;
                                                                         </script>
+
                                                                         <div id="audio-container" class="audio-box">
                                                                             <audio id="song" loop>
-                                                                                <source src="https://ts-invitation.com/uploads/2023/05/y2mate.com-Westlife-Nothings-Going-to-Change-My-Love-For-You-Audio.mp3" type="audio/mp3">
+                                                                                <source src="<?php echo base_url() ?>uploads/audio/y2mate.com-Westlife-Nothings-Going-to-Change-My-Love-For-You-Audio.mp3" type="audio/mp3">
                                                                             </audio>
 
-                                                                            <div class="elementor-icon-wrapper" id="unmute-sound" style="">
+                                                                            <div class="elementor-icon-wrapper show-icon-music" id="unmute-sound" style="display:none;" >
                                                                                 <div class="elementor-icon">
                                                                                     <i aria-hidden="true" class="fas fa-music"></i>
                                                                                 </div>
                                                                             </div>
 
-                                                                            <div class="elementor-icon-wrapper" id="mute-sound" style="display: none;">
+                                                                            <div class="elementor-icon-wrapper hide-icon-music" id="mute-sound" >
                                                                                 <div class="elementor-icon">
                                                                                     <i aria-hidden="true" class="fa fa-stop-circle"></i>
                                                                                 </div>
                                                                             </div>
+
+                                                                            
+
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>

@@ -32,6 +32,8 @@
 					
 					<th width="75px" class="pad-right-5" ><?php echo mlx_get_lang('S No.'); ?></th>
 					
+					
+					<th class="pad-right-5"><?php echo mlx_get_lang('Image'); ?></th>
 					<th class="pad-right-5"><?php echo mlx_get_lang('Title'); ?></th>
 					<th class="pad-right-5"><?php echo mlx_get_lang('Date'); ?></th>
 					<th class="pad-right-5"><?php echo mlx_get_lang('Time'); ?></th>
@@ -52,9 +54,18 @@
 					{ 	
 				?>						
 				  <tr>
-				   <td><?php echo  $n++; ?></td>
+					<td><?php echo  $n++; ?></td>
+					<td>
+						<?php 
+						$thumb_photo = $myHelpers->global_lib->get_image_type('../uploads/event/',$row->event_image,'thumb');
+						if(isset($thumb_photo) && !empty($thumb_photo))
+						{
+						?>
+						<img src="<?php echo base_url().'../uploads/event/'.$thumb_photo; ?>" width="50px" height="50px"/>
+						<?php } ?>
+					</td>
 				  
-					<td><?php echo  $row->event_title;?></td>
+					<td><?php $place = str_replace('-',' ',$row->event_place); echo strtoupper($place);?></td>
 					<td><?php echo  date('M d, Y',$row->event_date);?></td>
 					<td><?php echo  $row->event_time;?></td>
 					<td><?php echo  $row->event_venue;?></td>

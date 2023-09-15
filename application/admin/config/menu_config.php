@@ -17,6 +17,10 @@
 	$config ['sidebar_left'] [11]  = array( 	'class'=> 'main', 'method' => 'home_page', 
 											'text' => 'Homepage', 'link' => 'main/home_page',		
 											'collapse_class' => '','icon_class' => 'fa fa-home',);
+
+	$config ['sidebar_left'] [18]  = array('class' => 'gallery',  'method'=> '',
+											'text'=> 'Gallery', 'link'=> 'gallery',		
+												'collapse_class'=> '', 'icon_class'=> 'fa fa-picture-o');
 											
 	$config ['sidebar_left'] [12]  = array( 	'class' => 'story',  'method'=> '',
 											'text'=> 'Story', 'link'=> '#',		
@@ -29,6 +33,37 @@
 	$config ['sidebar_left'] [12] ['item']  [] = array( 	'class' => 'story',  'method'=> 'add_new',
 												'text'=> 'Add New', 'link'=> 'story/add_new',		
 												'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
+
+
+	$config ['sidebar_left'] [4545]  = array( 	'class' => 'kutipan',  'method'=> '',
+	'text'=> 'Kutipan', 'link'=> '#',
+	'collapse_class'=> 'fa fa-angle-left pull-right', 'icon_class'=> 'fa fa-commenting-o' );
+
+	$config ['sidebar_left'] [4545] ['item']  [] = array('class' => 'kutipan',  'method'=> 'manage',
+												'text'=> 'Manage', 'link'=> 'kutipan/manage',
+												'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
+
+	$config ['sidebar_left'] [4545] ['item']  [] = array( 	'class' => 'kutipan',  'method'=> 'add_new',
+												'text'=> 'Add New', 'link'=> 'kutipan/add_new',
+												'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
+
+
+	$config ['sidebar_left'] [04545]  = array( 	'class' => 'utility',  'method'=> '',
+												'text'=> 'Utility', 'link'=> '#',
+												'collapse_class'=> 'fa fa-angle-left pull-right', 'icon_class'=> 'fa fa-file-movie-o' );
+
+	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'filter_ig',
+												'text'=> 'Audio Upload', 'link'=> 'utility/audio',
+												'collapse_class'=> '','icon_class'=> 'fa fa-instagram-o',	);	
+	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'filter_ig',
+												'text'=> 'Filter IG', 'link'=> 'utility/filter_ig',
+												'collapse_class'=> '','icon_class'=> 'fa fa-instagram-o',	);
+	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'maps',
+												'text'=> 'Maps Embed', 'link'=> 'utility/maps',
+												'collapse_class'=> '','icon_class'=> 'fa fa-maps-o',	);
+	$config ['sidebar_left'] [04545] ['item']  [] = array('class' => 'utility',  'method'=> 'youtube',
+												'text'=> 'Youtube Embed', 'link'=> 'utility/youtube',
+												'collapse_class'=> '','icon_class'=> 'fa fa-youtube-o',	);
 												
 												
 	$config ['sidebar_left'] [13]  = array( 	'class' => 'event',  'method'=> '',
@@ -94,9 +129,7 @@
 												'text'=> 'Relations', 'link'=> 'relatives/relations',		
 												'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
 	
-	$config ['sidebar_left'] [18]  = array('class' => 'gallery',  'method'=> '',
-											'text'=> 'Gallery', 'link'=> 'gallery',		
-												'collapse_class'=> '', 'icon_class'=> 'fa fa-picture-o');
+	
 	
 	$config ['sidebar_left'] [21]  = array( 	'class' => 'blog',  'method'=> '',
 										'text'=> 'Blog', 'link'=> '#',		
@@ -248,14 +281,4 @@
 													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
 
 
-		$config ['sidebar_left'] [4545]  = array( 	'class' => 'quote',  'method'=> '',
-		'text'=> 'Quote', 'link'=> '#',
-		'collapse_class'=> 'fa fa-angle-left pull-right', 'icon_class'=> 'fa fa-sliders' );
-
-		$config ['sidebar_left'] [4545] ['item']  [] = array('class' => 'quote',  'method'=> 'manage',
-													'text'=> 'Manage', 'link'=> 'quote/manage',
-													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
-
-		$config ['sidebar_left'] [4545] ['item']  [] = array( 	'class' => 'quote',  'method'=> 'add_new',
-													'text'=> 'Add New', 'link'=> 'quote/add_new',
-													'collapse_class'=> '','icon_class'=> 'fa fa-circle-o',	);
+		

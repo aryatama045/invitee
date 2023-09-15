@@ -52,6 +52,18 @@ $row = $query->row();
 									 ?>">
 							</div>
 						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_place">Placement <span class="required">*</span></label>
+								<select class="form-control" id="event_place" name="event_place" style="width: 100%" required>
+									<option value="<?php if(isset($_POST['event_place'])) echo $_POST['event_place']; else echo $row->event_place; ?>"><?php if(isset($_POST['event_place'])) echo '--'.$_POST['event_place'].'--'; else echo '-- Selected '.$row->event_place.' --'; ?></option>
+									<option value="akad">Akad</option>
+									<option value="resepsi">Resepsi</option>
+									<option value="event">Event Lainnya</option>
+								</select>
+							</div>
+						</div>
 						
 						<div class="col-md-6">
 							<div class="form-group">
@@ -136,6 +148,34 @@ $row = $query->row();
 					
 				  </div>
                 </div>
+				<div class="box-body">
+						<label for="FirstName"><?php echo mlx_get_lang('Image'); ?></label>
+						<?php $thumb_photo = $myHelpers->global_lib->get_image_type('../uploads/event/',$row->event_image,'thumb'); ?>
+						<div class="form-group pl_image_container">
+							<label class="custom-file-upload" data-element_id="<?php if(isset($id) && !empty($id)) echo $id; ?>" data-type="event" id="pl_file_uploader_1" 
+							<?php if(isset($thumb_photo) && !empty($thumb_photo)) { echo 'style="display:none;"';}?>>
+								<i class="fa fa-cloud-upload"></i> <?php echo mlx_get_lang('Upload Image'); ?>
+							</label>
+							<progress class="pl_file_progress" value="0" max="100" style="display:none;"></progress>
+							<?php if(isset($thumb_photo) && !empty($thumb_photo)) { ?>
+								<a class="pl_file_link" href="<?php echo base_url().'../uploads/event/'.$row->event_image; ?>" 
+								download="<?php echo $row->event_image; ?>" style="">
+									<img src="<?php echo base_url().'../uploads/event/'.$thumb_photo; ?>" >
+								</a>
+								<a class="pl_file_remove_img" title="Remove Image" href="#"><i class="fa fa-remove"></i></a>
+							<?php }else{ ?>
+								<a class="pl_file_link" href="" download="" style="display:none;">
+									<img src="" >
+								</a>
+								<a class="pl_file_remove_img" title="Remove Image" href="#" style="display:none;"><i class="fa fa-remove"></i></a>
+							<?php } ?>
+							<input type="hidden" name="event_image" 
+							value="<?php if(isset($thumb_photo) && !empty($thumb_photo)) { echo $row->event_image;}?>" 
+							class="pl_file_hidden">
+						</div>
+
+				</div>
+				
 				 <div class="box-footer">
 					<button name="submit" type="submit" class="btn btn-primary pull-right" id="save_publish"><?php echo mlx_get_lang('Save Publish'); ?></button>
                   </div>

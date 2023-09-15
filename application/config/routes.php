@@ -52,8 +52,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-$route['([a-zA-Z0-9_-]+)-weds-([a-zA-Z0-9_-]+)/([0-9]+)'] = 
-		'wedevent/event/$1-weds-$2/$3';
+// $route['([a-zA-Z0-9_-]+)-weds-([a-zA-Z0-9_-]+)/([0-9]+)'] = 
+// 		'wedevent/event/$1-weds-$2/$3';
+
+$route['([a-zA-Z0-9_-]+)-weds-([a-zA-Z0-9_-]+)'] = 
+		'wedevent/event/$1-weds-$2/';
 		
 
 $route['register'] = 'main/register';

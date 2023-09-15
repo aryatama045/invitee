@@ -16,11 +16,17 @@ class Wedevent extends MY_Controller {
 	
 	public function event($args)
 	{
-		if(isset($args[0]) && $args[0] != '' && isset($args[1]) && $args[1] != '')
+
+	
+		
+
+		if(isset($args[0]) && $args[0] != '' )
 		{
 			$site_name = $args[0];
-			$site_id = $args[1];
+
+			$get_site_id = $this->Common_model->commonQuery("select * from wedding_details where site_name LIKE '%$site_name%' ")->row_array();
 			
+			$site_id = $get_site_id['id'];
 			
 			
 			$this->load->model('Common_model');
@@ -37,9 +43,7 @@ class Wedevent extends MY_Controller {
                 
             }
             
-            // 			tesx($theme);
-			
-			
+
 			
 			$this->load->library('Global_lib');
 			$this->load->helper('text');
@@ -72,8 +76,7 @@ class Wedevent extends MY_Controller {
 			$data['page_title'] = "Home";
 			$data['wedding_id'] = $site_id;
 			$data['wedding_user_id'] = $wedding_user_id;
-			
-// 			tesx($data['slider']);
+
 			
 			$this->load->view("$theme/wed-header",$data);
 		}

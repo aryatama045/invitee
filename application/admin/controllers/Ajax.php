@@ -41,11 +41,13 @@ class Ajax extends MY_Controller {
 					'wedding_time' => trim($wedding_time),
 					'wedding_venue' => trim($wedding_venue),
 					'groom_photo' => trim($groom_photo),
+					'groom_photo_bg' => trim($groom_photo_bg),
 					'groom_tag_line' => trim($groom_tag_line),
 					'groom_short_description' => trim($groom_short_description),
 					'groom_social_links' => json_encode($groom_links),
 					'bride_name' => trim($bride_name),
 					'bride_photo' => trim($bride_photo),
+					'bride_photo_bg' => trim($bride_photo_bg),
 					'bride_tag_line' => trim($bride_tag_line),
 					'bride_short_description' => trim($bride_short_description),
 					'bride_social_links' => json_encode($bride_links),
@@ -79,11 +81,13 @@ class Ajax extends MY_Controller {
 					'wedding_time' => trim($wedding_time),
 					'wedding_venue' => trim($wedding_venue),
 				'groom_photo' => trim($groom_photo),
+				'groom_photo_bg' => trim($groom_photo_bg),
 				'groom_tag_line' => trim($groom_tag_line),
 				'groom_short_description' => trim($groom_short_description),
 				'groom_social_links' => json_encode($groom_links),
 				'bride_name' => trim($bride_name),
 				'bride_photo' => trim($bride_photo),
+				'bride_photo_bg' => trim($bride_photo_bg),
 				'bride_tag_line' => trim($bride_tag_line),
 				'bride_short_description' => trim($bride_short_description),
 				'bride_social_links' => json_encode($bride_links),
@@ -101,6 +105,7 @@ class Ajax extends MY_Controller {
 			$this->Common_model->commonUpdate('wedding_details',$datai,'id',$id);
 
 		}
+		// tesx($datai);
 		$step = 0;
 		$wedding_data = $this->Common_model->commonQuery("select * from wedding_details");
 		if($wedding_data->num_rows() > 0)

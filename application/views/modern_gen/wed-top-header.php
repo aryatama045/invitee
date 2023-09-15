@@ -41,7 +41,11 @@ $opening2 = $this->Common_model->commonQuery("select * from wedding_slider Where
 $opening3 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_id = $wedding_id AND img_order='3' AND place='opening' ")->row_array();
 
 
-// tesx($couple->row()->groom_short_description);
+
+$kutipan_cover = $this->Common_model->commonQuery("select * from wedding_kutipan Where wedding_id = $wedding_id AND place LIKE '%cover%' ")->row_array();
+
+
+// tesx(date('d M Y',$info->wedding_date));
 
 ?>
 
@@ -233,15 +237,8 @@ $opening3 = $this->Common_model->commonQuery("select * from wedding_slider Where
                                 <div class="elementor-element elementor-element-674d04f wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="674d04f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <h2 class="elementor-heading-title elementor-size-default">
-                                            <?php echo $couple->row()->groom_short_description ?>
-                                            <br>
-                                            <?php echo $couple->row()->groom_signature ?>
+                                            <?php echo $kutipan_cover['kutipan'] ?>
                                         </h2>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-1461268 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="1461268" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                    <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default"><?php echo $couple->row()->groom_tag_line ?></h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-3823df4e wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="3823df4e" data-element_type="widget" data-widget_type="spacer.default">
@@ -263,9 +260,12 @@ $opening3 = $this->Common_model->commonQuery("select * from wedding_slider Where
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Oct 15, 2023 ").getTime();
+    // var countDownDate = new Date("Oct 15, 2023 ").getTime();
 
-    // var countDownDate = '<?php echo $info->wedding_date ?>';
+    var countDownDate0 = '<?php echo date('d M Y',$info->wedding_date) ?>';
+
+    var countDownDate = new Date(countDownDate0).getTime();
+
 
     // console.log(countDownDate);
 

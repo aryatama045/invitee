@@ -97,6 +97,8 @@ class Event extends MY_Controller {
 					}
 				}
 			}
+
+			// tesx($_POST);
 			
 			$this->form_validation->set_error_delimiters('<div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>', "</div>");
@@ -149,7 +151,9 @@ class Event extends MY_Controller {
 								'wedding_id' => trim($wedding_id),
 								'event_date'=>strtotime($event_date),
 								'event_time'=>trim($event_time),
+								'event_image'=>$event_image,
 								'event_venue' => trim($event_venue),
+								'event_place' => trim($event_place),
 								'contact_number' => trim($contact_number),
 								'lat' => '',
 								'lang' => '',
@@ -258,6 +262,8 @@ class Event extends MY_Controller {
 								'event_date' => strtotime($event_date),
 								'event_time' => trim($event_time),
 								'event_venue' => trim($event_venue),
+								'event_place' => trim($event_place),
+								'event_image'=> $event_image,
 								'contact_number' => trim($contact_number),
 								'lat' => '',
 								'lang' => '',

@@ -406,7 +406,7 @@
 							<?php 
 							$all_set = false;
 							if(isset($step) && !empty($step) && $step > 3) { $all_set = true; } ?>
-							<p class="text-center lead fill-form-block" <?php if(!$all_set) echo 'style="display:none;"'; ?>>All Set Go Ahead. <?php if(isset($row)) { ?> <a href="<?php echo str_replace('admin/','',base_url()).$row->site_name.'/'.$row->id; ?>" target="_blank">Click here</a> <?php } ?> to View Site</p>
+							<p class="text-center lead fill-form-block" <?php if(!$all_set) echo 'style="display:none;"'; ?>>All Set Go Ahead. <?php if(isset($row)) { ?> <a href="<?php echo str_replace('admin/','',base_url()).$row->site_name; ?>" target="_blank">Click here</a> <?php } ?> to View Site</p>
 							<p class="text-center lead unfill-form-block" <?php if($all_set) echo 'style="display:none;"'; ?>>Please Complete Wedding Details .</p>
 							
 						</div>

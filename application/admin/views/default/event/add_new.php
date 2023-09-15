@@ -52,6 +52,7 @@ $this->load->view("default/header-top");?>
 					  value="<?php if(isset($_POST['event_title'])) echo $_POST['event_title'];?>">
 					</div>
 				</div>
+				
 				<div class="col-md-6">
 					<div class="form-group">
 					  <label for="FirstName"><?php echo mlx_get_lang('Event Date'); ?> <span class="required">*</span></label>
@@ -73,6 +74,19 @@ $this->load->view("default/header-top");?>
 							  <i class="fa fa-clock-o"></i>
 							</div>
                       </div>
+					</div>
+				</div>
+
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="event_place">Placement <span class="required">*</span></label>
+						<select class="form-control" id="event_place" name="event_place" style="width: 100%" required>
+							<option value=""><?php if(isset($_POST['event_place'])) echo $_POST['event_place']; else echo '--Pilih Posisi--'; ?></option>
+							<option value="akad">Akad</option>
+							<option value="resepsi">Resepsi</option>
+							<option value="event">Event Lainnya</option>
+						</select>
 					</div>
 				</div>
 				<div class="col-md-12">
@@ -101,20 +115,38 @@ $this->load->view("default/header-top");?>
 	  </div>
 </div>
   
-  <div class="col-md-4">
-  <div class="box box-primary">
-	  <div class="box-header with-border">
-		  <h3 class="box-title"><?php echo mlx_get_lang('Status'); ?></h3>
-		  <div class="box-tools pull-right">
-			<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-			
-		  </div>
+  	<div class="col-md-4">
+	
+		<div class="box box-primary">
+			<div class="box-header with-border">
+
+					<h3 class="box-title"><?php echo mlx_get_lang('Status'); ?></h3>
+					<div class="box-tools pull-right">
+						<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+						
+					</div>
+			</div>
+			<div class="box-body">
+				<label for="FirstName"><?php echo mlx_get_lang('Cover Image'); ?><span class="required">*</span></label>
+				<div class="form-group pl_image_container">
+					<label class="custom-file-upload" data-element_id="" data-type="event" id="pl_file_uploader_1">
+						<i class="fa fa-cloud-upload"></i> <?php echo mlx_get_lang('Upload Image'); ?>
+					</label>
+					<progress class="pl_file_progress" value="0" max="100" style="display:none;"></progress>
+					<a class="pl_file_link" href="" download="" style="display:none;">
+						<img src="">
+					</a>
+					<a class="pl_file_remove_img" title="Remove Image" href="#" style="display:none;"><i class="fa fa-remove"></i></a>
+					<input type="hidden" name="event_image" value="" class="pl_file_hidden">
+				</div>
+				<hr>
+			</div>
+
+			<div class="box-footer">
+				<button name="submit" type="submit" class="btn btn-primary pull-right" id="save_publish"><?php echo mlx_get_lang('Save Publish'); ?></button>
+			</div>
 		</div>
-		 <div class="box-footer">
-			<button name="submit" type="submit" class="btn btn-primary pull-right" id="save_publish"><?php echo mlx_get_lang('Save Publish'); ?></button>
-		  </div>
-	  </div>
-  </div>
+	</div>
   
   </div>
 	  </form>
