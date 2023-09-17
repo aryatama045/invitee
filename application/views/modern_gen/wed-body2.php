@@ -436,7 +436,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                         <div class="elementor-element elementor-element-3a76b80a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3a76b80a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                                             <div class="elementor-widget-container">
                                                                                                 <h5 class="" style="text-align:center;">
-                                                                                                    2200142287<br>a.n. Hilda Arifin
+                                                                                                    No-rek-wanita <br> a.n. Nama Rek
                                                                                                 </h5>
                                                                                             </div>
                                                                                         </div>
@@ -453,7 +453,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                                             </span>
                                                                                                         </button>
                                                                                                     </div>
-                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-289a6beb-99779" aria-hidden="true" type="text" value="2200142287">
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-289a6beb-99779" aria-hidden="true" type="text" value="No-rek-wanita">
                                                                                                 </div>
                                                                                                 <script>
                                                                                                     jQuery(function() {
@@ -484,7 +484,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                         <div class="elementor-element elementor-element-454e9e1b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="454e9e1b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                                             <div class="elementor-widget-container">
                                                                                                 <h5 class="" style="text-align:center;">
-                                                                                                    1080007523195<br>a.n Guiliano Permadi
+                                                                                                    no-rek-pria<br>a.n Guiliano Permadi
                                                                                                 </h5>
                                                                                             </div>
                                                                                         </div>
@@ -501,7 +501,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                                             </span>
                                                                                                         </button>
                                                                                                     </div>
-                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-71964a3d-99779" aria-hidden="true" type="text" value="1080007523195">
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-71964a3d-99779" aria-hidden="true" type="text" value="no-rek-pria">
                                                                                                 </div>
                                                                                                 <script>
                                                                                                     jQuery(function() {
