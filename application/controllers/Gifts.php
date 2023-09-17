@@ -187,7 +187,7 @@ class Gifts extends MY_Controller {
 		$data['content'] = "$theme/payment_methods/paypal";			
 		$this->load->view("$theme/header",$data);
 
-	 }
+	}
 	
 	public function paypal_success($post = array())
     {

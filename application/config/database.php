@@ -97,10 +97,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'solusiitkreasi.com',
-	'username' => 'u1579603_public',
-	'password' => '!Public045',
-	'database' => 'u1579603_db_undangan',
+
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'db_undangan',
+
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

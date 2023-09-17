@@ -96,22 +96,21 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-1c029d7a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="1c029d7a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Pukul 12.00 WIB sd selesai</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                                        Pukul <?php echo date("h:i ", strtotime($akad['event_time'])) ?> WIB sd selesai</h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-bf5db wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="bf5db" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
                                                                         <h2 class="elementor-heading-title elementor-size-default">
-                                                                            Bertempat di<br>
-                                                                            Gedung At Tabrani Convention Hall<br>
-                                                                            Komplek At Tabrani Islamic Centre<br>Jalan bakti No 32, kel Tangkerang Barat, Kec Marpoyan damai, Pekanbaru
+                                                                                <?php echo $akad['event_venue'] ?>
                                                                         </h2>
                                                                     </div>
                                                                 </div>
                                                                 <div data-dce-background-color="#FFFFFF00" class="elementor-element elementor-element-35a0031a elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-button" data-id="35a0031a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-button-wrapper">
-                                                                            <a href="https://maps.app.goo.gl/75wkFMbe3mVNFwot6?g_st=ic" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                                                                            <a href="<?php echo $akad['openstreetmap_embed_code'] ?>" class="elementor-button-link elementor-button elementor-size-sm" role="button">
                                                                                 <span class="elementor-button-content-wrapper">
                                                                                     <span class="elementor-button-icon elementor-align-icon-left">
                                                                                         <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
@@ -271,7 +270,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                             <div class="elementor-widget-wrap">
                                                                 <div class="elementor-element elementor-element-19e5f8de wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="19e5f8de" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Sabtu</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default"> <?php echo tanggal(date('D',$resepsi['event_date'])) ?> </h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-77b2b702 wdp-sticky-section-no elementor-widget elementor-widget-counter" data-id="77b2b702" data-element_type="widget" data-widget_type="counter.default">
@@ -279,7 +278,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                         <div class="elementor-counter">
                                                                             <div class="elementor-counter-number-wrapper">
                                                                                 <span class="elementor-counter-number-prefix"></span>
-                                                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="9" data-from-value="30" data-delimiter=",">30</span>
+                                                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="<?php echo date('d',$resepsi['event_date']) ?>" data-from-value="30" data-delimiter=",">30</span>
                                                                                 <span class="elementor-counter-number-suffix"></span>
                                                                             </div>
                                                                         </div>
@@ -287,27 +286,25 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-87251e7 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="87251e7" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">September 2023</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default"><?php echo date('M',$akad['event_date']); ?> <?php echo date('Y',$akad['event_date']); ?></h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-42c5373d wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="42c5373d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default">Pukul 11.00 WIB Sd selesai</h2>
+                                                                        <h2 class="elementor-heading-title elementor-size-default">Pukul <?php echo date("h:i ", strtotime($akad['event_time'])) ?> WIB Sd selesai</h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-98f5c6b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="98f5c6b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
                                                                         <h2 class="elementor-heading-title elementor-size-default">
-                                                                            Bertempat di<br>
-                                                                            Gedung At Tabrani Convention Hall<br>
-                                                                            Komplek At Tabrani Islamic Centre<br>Jalan bakti No 32, kel Tangkerang Barat, Kec Marpoyan damai, Pekanbaru
+                                                                            <?php echo $akad['event_venue'] ?>
                                                                         </h2>
                                                                     </div>
                                                                 </div>
                                                                 <div data-dce-background-color="#FFFFFF00" class="elementor-element elementor-element-5cc7bb4 elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-button" data-id="5cc7bb4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-button-wrapper">
-                                                                            <a href="https://maps.app.goo.gl/75wkFMbe3mVNFwot6?g_st=ic" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                                                                            <a href="<?php echo $akad['openstreetmap_embed_code'] ?>" class="elementor-button-link elementor-button elementor-size-sm" role="button">
                                                                                 <span class="elementor-button-content-wrapper">
                                                                                     <span class="elementor-button-icon elementor-align-icon-left">
                                                                                         <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
@@ -417,49 +414,124 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                         <section class="elementor-section elementor-inner-section elementor-element elementor-element-6e37313e elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="6e37313e" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-615e96bb wdp-sticky-section-no" data-id="615e96bb" data-element_type="column">
+                            
+                                                    <div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5eee1e5f wdp-sticky-section-no" data-id="5eee1e5f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                         <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class="elementor-widget-wrap">
-                                                                <div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-7c53d1a7 elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="7c53d1a7" data-element_type="widget" data-widget_type="button.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-button-wrapper">
-                                                                            <a href="#elementor-action%3Aaction%3Dpopup%3Aopen&settings%3DeyJpZCI6Ijk5ODA2IiwidG9nZ2xlIjpmYWxzZX0%3D" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-                                                                                <span class="elementor-button-content-wrapper">
-                                                                                    <span class="elementor-button-icon elementor-align-icon-left">
-                                                                                        <i aria-hidden="true" class="fas fa-money-bill-wave"></i>
-                                                                                    </span>
-                                                                                    <span class="elementor-button-text">Transfer</span>
-                                                                                </span>
-                                                                            </a>
+                                                            
+                                                                <section data-dce-background-color="#FFFFFF" class="elementor-section elementor-inner-section elementor-element elementor-element-5fadb40d elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="5fadb40d" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-row">
+                                                                            <div data-dce-background-color="#FFFFFFD9" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-501cc221 wdp-sticky-section-no" data-id="501cc221" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                                    <div class="elementor-widget-wrap">
+                                                                                        
+                                                                                        <div class="elementor-element elementor-element-23e32790 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="23e32790" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-image">
+                                                                                                    <img width="45%" height="auto" src="<?php echo base_url('uploads/') ?>bca.svg" class="attachment-full size-full wp-image-719" alt="" loading="lazy"/>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-3a76b80a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3a76b80a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <h5 class="" style="text-align:center;">
+                                                                                                    2200142287<br>a.n. Hilda Arifin
+                                                                                                </h5>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-dce-background-color="#777777" class="elementor-element elementor-element-289a6beb elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-dce-copy-to-clipboard" data-id="289a6beb" data-element_type="widget" data-widget_type="dce-copy-to-clipboard.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
+                                                                                                    <div>
+                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-289a6beb-99779" data-clipboard-target="#dce-clipboard-value-289a6beb-99779">
+                                                                                                            <span class="elementor-button-content-wrapper dce-flexbox">
+                                                                                                                <span class="elementor-button-icon elementor-align-icon-left">
+                                                                                                                    <i aria-hidden="true" class="far fa-copy"></i>
+                                                                                                                </span>
+                                                                                                                <span class="elementor-button-text">Copy</span>
+                                                                                                            </span>
+                                                                                                        </button>
+                                                                                                    </div>
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-289a6beb-99779" aria-hidden="true" type="text" value="2200142287">
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    jQuery(function() {
+                                                                                                        var clipboard_289a6beb_99779 = new ClipboardJS('#dce-clipboard-btn-289a6beb-99779');
+                                                                                                        clipboard_289a6beb_99779.on('success', function(e) {
+                                                                                                            jQuery('#dce-clipboard-btn-289a6beb-99779').html('Copied!');
+                                                                                                            return false;
+                                                                                                        });
+                                                                                                        clipboard_289a6beb_99779.on('error', function(e) {
+                                                                                                            console.log(e);
+                                                                                                        });
+                                                                                                    });
+                                                                                                </script>
+                                                                                            </div>
+                                                                                        </div>
+
+
+
+                                                                                        <br><br>
+                                                                                        
+                                                                                        <div class="elementor-element elementor-element-11a2043c wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="11a2043c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="elementor-image">
+                                                                                                    <img width="45%" height="auto" src="<?php echo base_url('uploads/') ?>bca.svg" class="attachment-full size-full wp-image-719" alt="" loading="lazy"/>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-454e9e1b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="454e9e1b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <h5 class="" style="text-align:center;">
+                                                                                                    1080007523195<br>a.n Guiliano Permadi
+                                                                                                </h5>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-dce-background-color="#777777" class="elementor-element elementor-element-71964a3d elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-dce-copy-to-clipboard" data-id="71964a3d" data-element_type="widget" data-widget_type="dce-copy-to-clipboard.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
+                                                                                                    <div>
+                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-71964a3d-99779" data-clipboard-target="#dce-clipboard-value-71964a3d-99779">
+                                                                                                            <span class="elementor-button-content-wrapper dce-flexbox">
+                                                                                                                <span class="elementor-button-icon elementor-align-icon-left">
+                                                                                                                    <i aria-hidden="true" class="far fa-copy"></i>
+                                                                                                                </span>
+                                                                                                                <span class="elementor-button-text">Copy</span>
+                                                                                                            </span>
+                                                                                                        </button>
+                                                                                                    </div>
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-71964a3d-99779" aria-hidden="true" type="text" value="1080007523195">
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    jQuery(function() {
+                                                                                                        var clipboard_71964a3d_99779 = new ClipboardJS('#dce-clipboard-btn-71964a3d-99779');
+                                                                                                        clipboard_71964a3d_99779.on('success', function(e) {
+                                                                                                            jQuery('#dce-clipboard-btn-71964a3d-99779').html('Copied!');
+                                                                                                            return false;
+                                                                                                        });
+                                                                                                        clipboard_71964a3d_99779.on('error', function(e) {
+                                                                                                            console.log(e);
+                                                                                                        });
+                                                                                                    });
+                                                                                                </script>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </section>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7389e2cc wdp-sticky-section-no" data-id="7389e2cc" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-6b6c3ae elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="6b6c3ae" data-element_type="widget" data-widget_type="button.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-button-wrapper">
-                                                                            <a href="#elementor-action%3Aaction%3Dpopup%3Aopen&settings%3DeyJpZCI6Ijk5ODA5IiwidG9nZ2xlIjpmYWxzZX0%3D" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-                                                                                <span class="elementor-button-content-wrapper">
-                                                                                    <span class="elementor-button-icon elementor-align-icon-left">
-                                                                                        <i aria-hidden="true" class="fas fa-gift"></i>
-                                                                                    </span>
-                                                                                    <span class="elementor-button-text">Kado Fisik</span>
-                                                                                </span>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </section>
+
+                                        
                                         <div class="elementor-element elementor-element-68b46168 wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="68b46168" data-element_type="widget" data-widget_type="spacer.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-spacer">
@@ -487,6 +559,10 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                     <div class="elementor-widget-container">
                                                                         <div class="fluentform-widget-wrapper fluentform-widget-custom-radio-checkbox fluentform-widget-align-default">
                                                                             <div class='fluentform fluentform_wrapper_1359'>
+
+
+
+
                                                                                 <form data-form_id="1359" id="fluentform_1359" class="frm-fluent-form fluent_form_1359 ff-el-form-top ff_form_instance_1359_1 ff-form-loading" data-form_instance="ff_form_instance_1359_1" method="POST">
                                                                                     <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important;">
                                                                                         <legend class="ff_screen_reader_title" style="margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;">Hilda &Gui</legend>
@@ -536,72 +612,13 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                         </div>
                                                                                     </fieldset>
                                                                                 </form>
+
+
+
+
+
                                                                                 <div id='fluentform_1359_errors' class='ff-errors-in-stack ff_form_instance_1359_1 ff-form-loading_errors ff_form_instance_1359_1_errors'></div>
                                                                             </div>
-                                                                            <script type="text/javascript">
-                                                                                window.fluent_form_ff_form_instance_1359_1 = {
-                                                                                    "id": "1359",
-                                                                                    "settings": {
-                                                                                        "layout": {
-                                                                                            "labelPlacement": "top",
-                                                                                            "helpMessagePlacement": "with_label",
-                                                                                            "errorMessagePlacement": "inline",
-                                                                                            "cssClassName": "",
-                                                                                            "asteriskPlacement": "asterisk-right"
-                                                                                        },
-                                                                                        "restrictions": {
-                                                                                            "denyEmptySubmission": {
-                                                                                                "enabled": false
-                                                                                            }
-                                                                                        }
-                                                                                    },
-                                                                                    "form_instance": "ff_form_instance_1359_1",
-                                                                                    "form_id_selector": "fluentform_1359",
-                                                                                    "rules": {
-                                                                                        "names[first_name]": {
-                                                                                            "required": {
-                                                                                                "value": true,
-                                                                                                "message": "This field is required"
-                                                                                            }
-                                                                                        },
-                                                                                        "names[middle_name]": {
-                                                                                            "required": {
-                                                                                                "value": false,
-                                                                                                "message": "This field is required"
-                                                                                            }
-                                                                                        },
-                                                                                        "names[last_name]": {
-                                                                                            "required": {
-                                                                                                "value": false,
-                                                                                                "message": "This field is required"
-                                                                                            }
-                                                                                        },
-                                                                                        "dropdown": {
-                                                                                            "required": {
-                                                                                                "value": true,
-                                                                                                "message": "This field is required"
-                                                                                            }
-                                                                                        },
-                                                                                        "dropdown_1": {
-                                                                                            "required": {
-                                                                                                "value": true,
-                                                                                                "message": "This field is required"
-                                                                                            }
-                                                                                        }
-                                                                                    },
-                                                                                    "conditionals": {
-                                                                                        "dropdown_1": {
-                                                                                            "type": "any",
-                                                                                            "status": true,
-                                                                                            "conditions": [{
-                                                                                                "field": "dropdown",
-                                                                                                "value": "Hadir",
-                                                                                                "operator": "="
-                                                                                            }]
-                                                                                        }
-                                                                                    }
-                                                                                };
-                                                                            </script>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -619,123 +636,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                 </section>
 
 
-                <!-- Ucapan -->
-                <section data-dce-background-color="#D7CCC8" class="elementor-section elementor-top-section elementor-element elementor-element-3bbae63a elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="3bbae63a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
-                    <div class="elementor-container elementor-column-gap-no">
-                        <div class="elementor-row">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4efc26cd wdp-sticky-section-no" data-id="4efc26cd" data-element_type="column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                    <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-2eaa46a2 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="2eaa46a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="elementor-image">
-                                                <img decoding="async" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-66db6653 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="66db6653" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Kebahagiaan dan kegembiraan kami akan semakin lengkap dengan kehadiran dan doa restu Anda</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-14d734f4 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="14d734f4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_mobile&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Join with us</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-40182c3b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="40182c3b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">Berikan ucapan dan doa untuk kami</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-489d5d55 wdp-sticky-section-no elementor-widget elementor-widget-weddingpress-kit2" data-id="489d5d55" data-element_type="widget" data-widget_type="weddingpress-kit2.default">
-                                            <div class="elementor-widget-container">
-                                                <div class='cui-wrapper cui-golden cui-border' style='overflow: hidden;'>
-                                                    <div class='cui-wrap-link'>
-                                                        <div class='header-cui'>
-                                                            <a id='cui-link-99779' class='cui-link cui-icon-link cui-icon-link-true auto-load-true' href='?post_id=99779&comments=25&get=300&order=DESC' title='25 Comment'>
-                                                                <span>25</span>
-                                                                Comments
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <!--.cui-wrap-link-->
-                                                    <div id='cui-wrap-commnent-99779' class='cui-wrap-comments' style='display:none;'>
-                                                        <div id='cui-wrap-form-99779' class='cui-clearfix'>
-                                                            <div class="cui-comment-attendence">
-                                                                <div id="invitation-count-99779" class="cui_comment_count_card_wrap">
-                                                                    <div class="cui_comment_count_card_row">
-                                                                        <div class="cui_comment_count_card cui_card-hadir">
-                                                                            <span>0</span>
-                                                                            <span>Hadir</span>
-                                                                        </div>
-                                                                        <div class="cui_comment_count_card cui_card-tidak_hadir">
-                                                                            <span>0</span>
-                                                                            <span>Tidak hadir</span>
-                                                                        </div>
-                                                                        <div class="cui_comment_count_card cui_card-masih_ragu">
-                                                                            <span>0</span>
-                                                                            <span>Masih Ragu</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cui-clearfix cui-wrap-form ">
-                                                                <div id='cui-container-form-99779' class='cui-container-form cui-no-login'>
-                                                                    <div id='respond-99779' class='respond cui-clearfix'>
-                                                                        <form action='wp-comments-post.php' method='post' id='commentform-99779'>
-                                                                            <p class="comment-form-author cui-field-1">
-                                                                                <input id="author" name="author" type="text" aria-required="true" class="cui-input" placeholder="Name"/>
-                                                                                <span class="cui-required">*</span>
-                                                                                <span class="cui-error-info cui-error-info-name">Mohon maaf! Khusus untuk tamu undangan</span>
-                                                                            </p>
-                                                                            <div class="cui-wrap-textarea">
-                                                                                <textarea id="cui-textarea-99779" class="waci_comment cui-textarea autosize-textarea" name="comment" aria-required="true" placeholder="Wish" rows="2"></textarea>
-                                                                                <span class="cui-required">*</span>
-                                                                                <span class="cui-error-info cui-error-info-text">2 characters minimum.</span>
-                                                                            </div>
-                                                                            <div class="nm-wrap-comments">
-                                                                                <div class="row"></div>
-                                                                            </div>
-                                                                            <div class="cui-clearfix cui-wrap-select cui-field-wrap cui-select-attending">
-                                                                                <select class="waci_comment cui-select" name="konfirmasi" id="konfirmasi">
-                                                                                    <option value="" disabled selected>Konfirmasi Kehadiran</option>
-                                                                                    </option><option value="Hadir">Hadir</option>
-                                                                                    <option value="Tidak hadir">Tidak hadir</option>
-                                                                                    <option value="Masih Ragu">Masih Ragu</option>
-                                                                                    </select><span class="cui-required"></span>
-                                                                                    <span class="cui-error-info cui-error-info-confirm"></span>
-                                                                                    </div>
-                                                                                    <div class='cui-wrap-submit cui-clearfix'>
-                                                                                        <p class='form-submit'>
-                                                                                            <span class="cui-hide">Do not change these fields following</span>
-                                                                                            <input type="text" class="cui-hide" name="name" value="username">
-                                                                                            <input type="text" class="cui-hide" name="nombre" value="">
-                                                                                            <input type="text" class="cui-hide" name="form-cui" value="">
-                                                                                            <input type="button" class="cui-form-btn cui-cancel-btn" value="Cancel">
-                                                                                            <input name='submit' id='submit-99779' value='Send' type='submit'/>
-                                                                                            <input type='hidden' name='commentpress' value='true'/>
-                                                                                            <input type='hidden' name='comment_post_ID' value='99779' id='comment_post_ID'/>
-                                                                                            <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
-                                                                                        </p>
-                                                                                    </div>
-                                                                                    </form></div></div>
-                                                                                    <!--.cui-container-form-->
-                                                                                    </div>
-                                                                                    <!--.cui-clearfix cui-relative-->
-                                                                                    </div>
-                                                                                    <!--.cui-wrap-form-->
-                                                                                    <div id='cui-comment-status-99779' class='cui-comment-status'></div>
-                                                                                    <div id='cui-box' class='cui-box'>
-                                                                                        <ul id='cui-container-comment-99779' class='cui-container-comments cui-order-DESC  cui-has-25-comments cui-multiple-comments' data-order='DESC'></ul>
-                                                                                    </div>
-                                                                                    <div class='cui-holder-99779 cui-holder'></div>
-                                                                                    </div>
-                                                                                    <!--.cui-wrap-comments-->
-                                                                                    </div>
-                                                                                    <!--.cui-wrapper-->
-                                                                                    </div></div></div></div></div></div></div>
-                </section>
-
+                
 
 
                 <!-- Gallery -->
@@ -757,7 +658,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                         </div>
 
                                         <!-- Embed Youtube -->
-                                        <div class="elementor-element elementor-element-fa2b3fe wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="fa2b3fe" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/a0r3GlaWKn8&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+                                        <div class="elementor-element elementor-element-fa2b3fe wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="fa2b3fe" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/FgN3BKQTPbI&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                     <div class="elementor-video"></div>
@@ -817,7 +718,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
 
 
                 <!-- Covid Info -->
-                <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-17788797 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="17788797" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+                <!-- <section data-dce-background-color="#8D6E63" class="elementor-section elementor-top-section elementor-element elementor-element-17788797 elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="17788797" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
                     <div class="elementor-container elementor-column-gap-no">
                         <div class="elementor-row">
                             <div data-dce-background-color="#FFFFFF" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5eee1e5f wdp-sticky-section-no" data-id="5eee1e5f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -934,7 +835,62 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                             </div>
                         </div>
                     </div>
+                </section> -->
+
+                <!-- Ucapan -->
+                <section data-dce-background-color="#D7CCC8" class="elementor-section elementor-top-section elementor-element elementor-element-3bbae63a elementor-section-full_width elementor-section-height-default elementor-section-height-default wdp-sticky-section-no" data-id="3bbae63a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4efc26cd wdp-sticky-section-no" data-id="4efc26cd" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <!-- <div class="elementor-element elementor-element-2eaa46a2 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="2eaa46a2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-image">
+                                                <img decoding="async" width="1065" height="1600" src="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg" class="attachment-full size-full wp-image-99791" alt="" srcset="https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11.jpg 1065w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-200x300.jpg 200w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-682x1024.jpg 682w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-768x1154.jpg 768w, https://ts-invitation.com/wp-content/uploads/2023/08/HILDA-GUI11-1022x1536.jpg 1022w" sizes="(max-width: 1065px) 100vw, 1065px">                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="elementor-element elementor-element-66db6653 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="66db6653" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Kebahagiaan dan kegembiraan kami akan semakin lengkap dengan kehadiran dan doa restu Anda</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-14d734f4 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="14d734f4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_mobile&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Join with us</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-40182c3b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="40182c3b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">Berikan ucapan dan doa untuk kami</h2>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="elementor-section elementor-inner-section elementor-element elementor-element-463a6d92 elementor-section-boxed elementor-section-height-default elementor-section-height-default wdp-sticky-section-no">
+                                            <div class="elementor-element elementor-element-40182c3b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="40182c3b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                <style>
+                                            .commonninja-ribbon-link{
+                                                diplay: hidden !important;
+                                                visibility: hidden !important;
+                                            }
+                                        </style>
+                                                    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+                                                    <div class="commonninja_component pid-695acb88-e094-49a1-aa2a-380ed586800b"></div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+                
 
 
 
@@ -1000,14 +956,14 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-image">
                                                     <img decoding="async" loading="lazy" width="1600" height="1600"
-                                                    src="https://ts-invitation.com/uploads/2023/04/TS-Invitation-Rebrand_1-1.png" class="attachment-full size-full wp-image-46" alt=""
+                                                    src="<?php echo base_url('uploads/') ?>kayoxlv.JPG" class="attachment-full size-full wp-image-46" alt=""
                                                     sizes="(max-width: 1600px) 100vw, 1600px"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-43fc9cee wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="43fc9cee" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">© Copyright 2023 TS Invitation All Rights Reserved</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">© Copyright 2023 Kayo XLV All Rights Reserved</h2>
                                             </div>
                                         </div>
                                     </div>

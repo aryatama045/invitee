@@ -33,7 +33,7 @@ $kutipan_opening = $this->Common_model->commonQuery("select * from wedding_kutip
                                 
 
                                 <!-- Embed Youtube -->
-                                <div class="elementor-element elementor-element-5e738c9 wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="5e738c9" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/3zAMlAq2u2Y&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+                                <div class="elementor-element elementor-element-5e738c9 wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="5e738c9" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/FgN3BKQTPbI&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-wrapper elementor-open-inline">
                                             <div class="elementor-video"></div>
@@ -52,9 +52,9 @@ $kutipan_opening = $this->Common_model->commonQuery("select * from wedding_kutip
                                             ?>
 
                                             <?php if(!empty($thumb_img_name)){ ?>
-                                                <div class="swiper-slide" style="width: 323.5px; margin-right: 5px;">
+                                                <div class="swiper-slide" >
                                                     <figure class="swiper-slide-inner">
-                                                        <img decoding="async" class="swiper-slide-image" style="width: 323.5px; margin-right: 5px;"
+                                                        <img width="400" height="400" decoding="async" class="swiper-slide-image" 
                                                         src="<?php echo base_url().$rw->image_path.$thumb_img_name; ?>" alt="<?php echo $thumb_img_name ?>"/>
                                                     </figure>
                                                 </div>
@@ -114,7 +114,7 @@ $kutipan_opening = $this->Common_model->commonQuery("select * from wedding_kutip
                         </div>
                     </div>
                     <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-66997293 wdp-sticky-section-no" data-id="66997293" data-element_type="column"
-                    data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+                    data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->bride_photo_bg) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
                         <div class="elementor-column-wrap elementor-element-populated">
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-5efcb30b wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="5efcb30b" data-element_type="widget" data-widget_type="spacer.default">
@@ -206,7 +206,7 @@ $kutipan_opening = $this->Common_model->commonQuery("select * from wedding_kutip
             <div class="elementor-container elementor-column-gap-no">
                 <div class="elementor-row">
                     <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-36dd1671 wdp-sticky-section-no" data-id="36dd1671" data-element_type="column" 
-                        data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+                        data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:12,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo) ?>&quot;},{&quot;id&quot;:56,&quot;url&quot;:&quot;<?php echo str_replace('/', '\\/', base_url().'uploads/weddings/'.$couple->row()->groom_photo_bg) ?>&quot;}],&quot;background_slideshow_slide_duration&quot;:0,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:8000,&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
                         <div class="elementor-column-wrap elementor-element-populated">
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-7b15863b wdp-sticky-section-no elementor-widget elementor-widget-spacer" data-id="7b15863b" data-element_type="widget" data-widget_type="spacer.default">
