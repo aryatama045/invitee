@@ -431,6 +431,8 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
 
                                                                                     <?php foreach($rek_bank as $k=>$v) { ?>
                                                                                         
+                                                                                        <?php if($v['bank'] != 'GIFT') {  ?>
+
                                                                                         <div class="elementor-element elementor-element-23e32790 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="23e32790" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                                                                             <div class="elementor-widget-container">
                                                                                                 <div class="elementor-image">
@@ -476,9 +478,56 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                                         </div>
 
                                                                                         <br><br>
+                                                                                        <?php } else {?>
+
+                                                                                        <div class="elementor-element elementor-element-23e32790 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="23e32790" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <h4 class="" style="text-align:center;">
+                                                                                                    Pengiriman Kado
+                                                                                                </h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="elementor-element elementor-element-3a76b80a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3a76b80a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <h6 class="" style="text-align:center;">
+                                                                                                    <?php echo $v['nama'] ?> <br> <?php echo $v['alamat'] ?>
+                                                                                                </h6>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-dce-background-color="#777777" class="elementor-element elementor-element-289a6beb elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-dce-copy-to-clipboard" data-id="289a6beb" data-element_type="widget" data-widget_type="dce-copy-to-clipboard.default">
+                                                                                            <div class="elementor-widget-container">
+                                                                                                <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
+                                                                                                    <div>
+                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-<?php echo $v['id_bank'] ?>" data-clipboard-target="#dce-clipboard-value-<?php echo $v['alamat'] ?>">
+                                                                                                            <span class="elementor-button-content-wrapper dce-flexbox">
+                                                                                                                <span class="elementor-button-icon elementor-align-icon-left">
+                                                                                                                    <i aria-hidden="true" class="far fa-copy"></i>
+                                                                                                                </span>
+                                                                                                                <span class="elementor-button-text">Copy</span>
+                                                                                                            </span>
+                                                                                                        </button>
+                                                                                                    </div>
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-<?php echo $v['alamat'] ?>" aria-hidden="true" type="text" value="<?php echo $v['alamat'] ?>">
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    jQuery(function() {
+                                                                                                        var clipboard_<?php echo $v['id_bank'] ?> = new ClipboardJS('#dce-clipboard-btn-<?php echo $v['id_bank'] ?>');
+                                                                                                        clipboard_<?php echo $v['id_bank'] ?>.on('success', function(e) {
+                                                                                                            jQuery('#dce-clipboard-btn-<?php echo $v['id_bank'] ?>').html('Copied!');
+                                                                                                            return false;
+                                                                                                        });
+                                                                                                        clipboard_<?php echo $v['id_bank'] ?>.on('error', function(e) {
+                                                                                                            console.log(e);
+                                                                                                        });
+                                                                                                    });
+                                                                                                </script>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <br><br>
 
 
-                                                                                    <?php } ?>
+                                                                                    <?php } } ?>
 
 
 
