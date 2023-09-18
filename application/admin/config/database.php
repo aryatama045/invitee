@@ -97,10 +97,10 @@ $db['default'] = array(
 	'dsn'	=> '',
 	
 
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'db_undangan',
+	'hostname' => 'solusiitkreasi.com', 
+	'username' => 'u1579603_public', 
+	'password' => '!Public045', 
+	'database' => 'u1579603_db_undangan',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

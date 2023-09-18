@@ -34,6 +34,9 @@ $wedding_gifts1 = $this->Common_model->commonQuery("select * from wedding_slider
 
 $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider Where wedding_user_id = $wedding_user_id AND wedding_id = $wedding_id AND place LIKE '%wedding-gifts%' order by img_order desc ")->row_array();
 
+
+$rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Where wedding_user_id = $wedding_user_id ")->result_array();
+
 ?>
 
 
@@ -425,6 +428,8 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                             <div data-dce-background-color="#FFFFFFD9" class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-501cc221 wdp-sticky-section-no" data-id="501cc221" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                                                                                 <div class="elementor-column-wrap elementor-element-populated">
                                                                                     <div class="elementor-widget-wrap">
+
+                                                                                    <?php foreach($rek_bank as $k=>$v) { ?>
                                                                                         
                                                                                         <div class="elementor-element elementor-element-23e32790 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="23e32790" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                                                                             <div class="elementor-widget-container">
@@ -436,7 +441,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                         <div class="elementor-element elementor-element-3a76b80a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="3a76b80a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                                             <div class="elementor-widget-container">
                                                                                                 <h5 class="" style="text-align:center;">
-                                                                                                    No-rek-wanita <br> a.n. Nama Rek
+                                                                                                    <?php echo $v['no_rek'] ?> <br> a.n. <?php echo $v['nama'] ?>
                                                                                                 </h5>
                                                                                             </div>
                                                                                         </div>
@@ -444,7 +449,7 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                             <div class="elementor-widget-container">
                                                                                                 <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
                                                                                                     <div>
-                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-289a6beb-99779" data-clipboard-target="#dce-clipboard-value-289a6beb-99779">
+                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-<?php echo $v['no_rek'] ?>" data-clipboard-target="#dce-clipboard-value-<?php echo $v['no_rek'] ?>">
                                                                                                             <span class="elementor-button-content-wrapper dce-flexbox">
                                                                                                                 <span class="elementor-button-icon elementor-align-icon-left">
                                                                                                                     <i aria-hidden="true" class="far fa-copy"></i>
@@ -453,16 +458,16 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                                             </span>
                                                                                                         </button>
                                                                                                     </div>
-                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-289a6beb-99779" aria-hidden="true" type="text" value="No-rek-wanita">
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-<?php echo $v['no_rek'] ?>" aria-hidden="true" type="text" value="<?php echo $v['no_rek'] ?>">
                                                                                                 </div>
                                                                                                 <script>
                                                                                                     jQuery(function() {
-                                                                                                        var clipboard_289a6beb_99779 = new ClipboardJS('#dce-clipboard-btn-289a6beb-99779');
-                                                                                                        clipboard_289a6beb_99779.on('success', function(e) {
-                                                                                                            jQuery('#dce-clipboard-btn-289a6beb-99779').html('Copied!');
+                                                                                                        var clipboard_<?php echo $v['no_rek'] ?> = new ClipboardJS('#dce-clipboard-btn-<?php echo $v['no_rek'] ?>');
+                                                                                                        clipboard_<?php echo $v['no_rek'] ?>.on('success', function(e) {
+                                                                                                            jQuery('#dce-clipboard-btn-<?php echo $v['no_rek'] ?>').html('Copied!');
                                                                                                             return false;
                                                                                                         });
-                                                                                                        clipboard_289a6beb_99779.on('error', function(e) {
+                                                                                                        clipboard_<?php echo $v['no_rek'] ?>.on('error', function(e) {
                                                                                                             console.log(e);
                                                                                                         });
                                                                                                     });
@@ -470,9 +475,12 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
                                                                                             </div>
                                                                                         </div>
 
-
-
                                                                                         <br><br>
+
+
+                                                                                    <?php } ?>
+
+
                                                                                         
                                                                                         <div class="elementor-element elementor-element-11a2043c wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="11a2043c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                                                                             <div class="elementor-widget-container">
