@@ -481,50 +481,9 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                                     <?php } ?>
 
 
-                                                                                        
-                                                                                        <div class="elementor-element elementor-element-11a2043c wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="11a2043c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-                                                                                            <div class="elementor-widget-container">
-                                                                                                <div class="elementor-image">
-                                                                                                    <img width="45%" height="auto" src="<?php echo base_url('uploads/') ?>bca.svg" class="attachment-full size-full wp-image-719" alt="" loading="lazy"/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="elementor-element elementor-element-454e9e1b wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="454e9e1b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-                                                                                            <div class="elementor-widget-container">
-                                                                                                <h5 class="" style="text-align:center;">
-                                                                                                    no-rek-pria<br>a.n Guiliano Permadi
-                                                                                                </h5>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div data-dce-background-color="#777777" class="elementor-element elementor-element-71964a3d elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-dce-copy-to-clipboard" data-id="71964a3d" data-element_type="widget" data-widget_type="dce-copy-to-clipboard.default">
-                                                                                            <div class="elementor-widget-container">
-                                                                                                <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
-                                                                                                    <div>
-                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-71964a3d-99779" data-clipboard-target="#dce-clipboard-value-71964a3d-99779">
-                                                                                                            <span class="elementor-button-content-wrapper dce-flexbox">
-                                                                                                                <span class="elementor-button-icon elementor-align-icon-left">
-                                                                                                                    <i aria-hidden="true" class="far fa-copy"></i>
-                                                                                                                </span>
-                                                                                                                <span class="elementor-button-text">Copy</span>
-                                                                                                            </span>
-                                                                                                        </button>
-                                                                                                    </div>
-                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-71964a3d-99779" aria-hidden="true" type="text" value="no-rek-pria">
-                                                                                                </div>
-                                                                                                <script>
-                                                                                                    jQuery(function() {
-                                                                                                        var clipboard_71964a3d_99779 = new ClipboardJS('#dce-clipboard-btn-71964a3d-99779');
-                                                                                                        clipboard_71964a3d_99779.on('success', function(e) {
-                                                                                                            jQuery('#dce-clipboard-btn-71964a3d-99779').html('Copied!');
-                                                                                                            return false;
-                                                                                                        });
-                                                                                                        clipboard_71964a3d_99779.on('error', function(e) {
-                                                                                                            console.log(e);
-                                                                                                        });
-                                                                                                    });
-                                                                                                </script>
-                                                                                            </div>
-                                                                                        </div>
+
+
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
