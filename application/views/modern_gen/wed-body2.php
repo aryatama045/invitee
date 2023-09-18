@@ -37,6 +37,13 @@ $wedding_gifts2 = $this->Common_model->commonQuery("select * from wedding_slider
 
 $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Where wedding_user_id = $wedding_user_id ")->result_array();
 
+
+$youtube_embed = $this->Common_model->commonQuery("select * from wedding_utility Where wedding_user_id = $wedding_user_id AND nama ='youtube' ")->row_array();
+
+$audio_embed = $this->Common_model->commonQuery("select * from wedding_utility Where wedding_user_id = $wedding_user_id AND nama ='audio' ")->row_array();
+
+$filter_ig_embed = $this->Common_model->commonQuery("select * from wedding_utility Where wedding_user_id = $wedding_user_id AND nama ='filter_ig' ")->row_array();
+
 ?>
 
 
@@ -100,7 +107,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                 <div class="elementor-element elementor-element-1c029d7a wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="1c029d7a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
                                                                     <div class="elementor-widget-container">
                                                                         <h2 class="elementor-heading-title elementor-size-default">
-                                                                        Pukul <?php echo date("h:i ", strtotime($akad['event_time'])) ?> WIB sd selesai</h2>
+                                                                        Pukul <?php echo date("h:i ", strtotime($akad['event_time'])) ?> WIB s/d  <?php echo $akad['event_time_end'] ?> </h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-bf5db wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-heading" data-id="bf5db" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
@@ -371,7 +378,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                         <div data-dce-background-color="#00000054" class="elementor-element elementor-element-4fac669 elementor-mobile-align-center elementor-align-center wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-button" data-id="4fac669" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
-                                                    <a href="https://www.instagram.com/ar/1283202138999706/" target="_blank" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                                                    <a href="<?php echo $filter_ig_embed['konten'] ?>" target="_blank" class="elementor-button-link elementor-button elementor-size-sm" role="button">
                                                         <span class="elementor-button-content-wrapper">
                                                             <span class="elementor-button-icon elementor-align-icon-left">
                                                                 <i aria-hidden="true" class="fab fa-instagram"></i>
@@ -676,7 +683,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                         </div>
 
                                         <!-- Embed Youtube -->
-                                        <div class="elementor-element elementor-element-fa2b3fe wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="fa2b3fe" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https://youtu.be/FgN3BKQTPbI&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+                                        <div class="elementor-element elementor-element-fa2b3fe wdp-sticky-section-no elementor-widget elementor-widget-video" data-id="fa2b3fe" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;<?php echo $youtube_embed['konten'] ?>&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-wrapper elementor-open-inline">
                                                     <div class="elementor-video"></div>
@@ -1017,7 +1024,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
 
                                                                         <div id="audio-container" class="audio-box">
                                                                             <audio id="song" loop>
-                                                                                <source src="<?php echo base_url() ?>uploads/audio/y2mate.com-Westlife-Nothings-Going-to-Change-My-Love-For-You-Audio.mp3" type="audio/mp3">
+                                                                                <source src="<?php echo base_url('uploads/audio/'.$audio_embed['konten']) ?>" type="audio/mp3">
                                                                             </audio>
 
                                                                             <div class="elementor-icon-wrapper show-icon-music" id="unmute-sound" style="display:none;" >

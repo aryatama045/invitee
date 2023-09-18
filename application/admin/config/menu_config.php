@@ -52,7 +52,7 @@
 												'text'=> 'Utility', 'link'=> '#',
 												'collapse_class'=> 'fa fa-angle-left pull-right', 'icon_class'=> 'fa fa-file-movie-o' );
 
-	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'filter_ig',
+	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'audio',
 												'text'=> 'Audio Upload', 'link'=> 'utility/audio',
 												'collapse_class'=> '','icon_class'=> 'fa fa-instagram-o',	);	
 	$config ['sidebar_left'] [04545] ['item']  [] = array( 	'class' => 'utility',  'method'=> 'filter_ig',
