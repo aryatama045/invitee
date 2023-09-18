@@ -507,7 +507,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                                                             </span>
                                                                                                         </button>
                                                                                                     </div>
-                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-<?php echo $v['alamat'] ?>" aria-hidden="true" type="text" value="<?php echo $v['alamat'] ?>">
+                                                                                                    <input class="elementor-size-sm dce-clipboard-value elementor-field-textual dce-offscreen dce-form-control" id="dce-clipboard-value-<?php echo $v['id_bank'] ?>" aria-hidden="true" type="text" value="<?php echo $v['alamat'] ?>">
                                                                                                 </div>
                                                                                                 <script>
                                                                                                     jQuery(function() {
