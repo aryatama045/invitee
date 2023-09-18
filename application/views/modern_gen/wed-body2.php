@@ -480,6 +480,8 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                                         <br><br>
                                                                                         <?php } else {?>
 
+                                                                                        <br><br><hr>
+
                                                                                         <div class="elementor-element elementor-element-23e32790 wdp-sticky-section-no elementor-invisible elementor-widget elementor-widget-image" data-id="23e32790" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
                                                                                             <div class="elementor-widget-container">
                                                                                                 <h4 class="" style="text-align:center;">
