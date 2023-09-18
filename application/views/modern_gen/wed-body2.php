@@ -498,7 +498,7 @@ $rek_bank = $this->Common_model->commonQuery("select * from wedding_bank_gift Wh
                                                                                             <div class="elementor-widget-container">
                                                                                                 <div class="dce-clipboard-wrapper dce-clipboard-wrapper-text">
                                                                                                     <div>
-                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-<?php echo $v['id_bank'] ?>" data-clipboard-target="#dce-clipboard-value-<?php echo $v['alamat'] ?>">
+                                                                                                        <button class="elementor-button elementor-size-sm" type="button" id="dce-clipboard-btn-<?php echo $v['id_bank'] ?>" data-clipboard-target="#dce-clipboard-value-<?php echo $v['id_bank'] ?>">
                                                                                                             <span class="elementor-button-content-wrapper dce-flexbox">
                                                                                                                 <span class="elementor-button-icon elementor-align-icon-left">
                                                                                                                     <i aria-hidden="true" class="far fa-copy"></i>
