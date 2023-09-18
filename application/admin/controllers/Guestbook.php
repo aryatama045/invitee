@@ -37,8 +37,9 @@ class Guestbook extends MY_Controller {
 		$this->load->model('Common_model');
 		$this->load->helper('text');
 		
-		
-		$data['query'] = $this->Common_model->commonQuery("select * from wedding_invitations order by id");
+		$wedding_user_id = $this->session->userdata('user_id');
+
+		$data['query'] = $this->Common_model->commonQuery("select * from wedding_invitations where wedding_user_id ='$wedding_user_id' order by id");
 			
 		$evns = $this->Common_model->commonQuery("SELECT event_id,event_title,event_date,event_time FROM wedding_event");
 		$data['events'] = $evns->result();

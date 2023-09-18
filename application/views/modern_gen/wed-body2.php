@@ -1,6 +1,19 @@
 <?php
 global $settings;
 
+$url = $_SERVER['REQUEST_URI'];
+
+    $url_components = parse_url($url);
+
+    $get_nama = $this->input->get('nama', TRUE);
+
+
+    if(!empty($get_nama)){
+
+        $nama_undangan = str_replace('-', ' ', $get_nama);
+
+    }
+
 if(!isset($wedding_id)) return false;
 
 $gallery = $this->Common_model->commonQuery("select wg1.image_name as org,wg2.image_name as med,wg1.image_path
@@ -585,16 +598,19 @@ $filter_ig_embed = $this->Common_model->commonQuery("select * from wedding_utili
                                                                         <div class="fluentform-widget-wrapper fluentform-widget-custom-radio-checkbox fluentform-widget-align-default">
                                                                             <div class='fluentform fluentform_wrapper_1359'>
 
+                                                                            <?php if(isset($_SESSION['msg']) && !empty($_SESSION['msg']))
+                                                                                    {
+                                                                                        echo $_SESSION['msg'];
+                                                                                        unset($_SESSION['msg']);
+                                                                                    }
+                                                                            ?>
+                                                                            
+                                                                                <?php 
+                                                                                    $attributes = array('method'=>'post', 'class' => 'frm-fluent-form  ff-el-form-top ');		 			
+                                                                                    echo form_open('ajax/guestbooks',$attributes); ?>
+                                                                                        <input type="hidden"  name="wedding_user_id" value="<?php echo $wedding_user_id ?>"/>
 
-
-
-                                                                                <form data-form_id="1359" id="fluentform_1359" class="frm-fluent-form fluent_form_1359 ff-el-form-top ff_form_instance_1359_1 ff-form-loading" data-form_instance="ff_form_instance_1359_1" method="POST">
-                                                                                    <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important;">
-                                                                                        <legend class="ff_screen_reader_title" style="margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;">Hilda &Gui</legend>
-                                                                                        <input type='hidden' name='__fluent_form_embded_post_id' value='99779'/>
-                                                                                        <input type="hidden" id="_fluentform_1359_fluentformnonce" name="_fluentform_1359_fluentformnonce" value="33c129ca12"/>
-                                                                                        <input type="hidden" name="_wp_http_referer" value="/hilda-gui/?to=%22sikim%22"/>
-                                                                                        <div data-type="name-element" data-name="names" class=" ff-field_container ff-name-field-wrapper">
+                                                                                        <div class=" ff-field_container ff-name-field-wrapper">
                                                                                             <div class='ff-t-container'>
                                                                                                 <div class='ff-t-cell '>
                                                                                                     <div class='ff-el-group  ff-el-form-top'>
@@ -602,7 +618,7 @@ $filter_ig_embed = $this->Common_model->commonQuery("select * from wedding_utili
                                                                                                             <label for='ff_1359_names_first_name_' aria-label="Nama">Nama</label>
                                                                                                         </div>
                                                                                                         <div class='ff-el-input--content'>
-                                                                                                            <input type="text" name="names[first_name]" id="ff_1359_names_first_name_" class="ff-el-form-control" placeholder="Nama" aria-invalid="false" aria-required=false>
+                                                                                                            <input type="text" name="nama" value="<?php if(!empty($nama_undangan)) {?> <?php echo strtoupper($nama_undangan) ?> <?php } ?>" class="ff-el-form-control" placeholder="<?php if(!empty($nama_undangan)) {?> &quot;<?php echo strtoupper($nama_undangan) ?>&quot; <?php } ?>" aria-invalid="false" aria-required=false>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
@@ -613,29 +629,16 @@ $filter_ig_embed = $this->Common_model->commonQuery("select * from wedding_utili
                                                                                                 <label for='ff_1359_dropdown' aria-label="Konfirmasi Kehadiran">Konfirmasi Kehadiran</label>
                                                                                             </div>
                                                                                             <div class='ff-el-input--content'>
-                                                                                                <select name="dropdown" id="ff_1359_dropdown" class="ff-el-form-control" data-name="dropdown" data-calc_value="0" aria-invalid="false" aria-required=true>
+                                                                                                <select name="dropdown"  class="ff-el-form-control" data-name="dropdown" data-calc_value="0" aria-invalid="false" aria-required=true>
                                                                                                     <option value="">- Select -</option>
                                                                                                     <option value="Hadir">Hadir</option>
                                                                                                     <option value="Tidak Hadir">Tidak Hadir</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class='ff-el-group has-conditions'>
-                                                                                            <div class="ff-el-input--label ff-el-is-required asterisk-right">
-                                                                                                <label for='ff_1359_dropdown_1' aria-label="Jumlah Tamu">Jumlah Tamu</label>
-                                                                                            </div>
-                                                                                            <div class='ff-el-input--content'>
-                                                                                                <select name="dropdown_1" id="ff_1359_dropdown_1" class="ff-el-form-control" data-name="dropdown_1" data-calc_value="0" aria-invalid="false" aria-required=true>
-                                                                                                    <option value="">- Select -</option>
-                                                                                                    <option value="1 Orang">1 Orang</option>
-                                                                                                    <option value="2 Orang">2 Orang</option>
-                                                                                                </select>
-                                                                                            </div>
-                                                                                        </div>
                                                                                         <div class='ff-el-group ff-text-left ff_submit_btn_wrapper'>
-                                                                                            <button type="submit" class="ff-btn ff-btn-submit ff-btn-md ff_btn_style">Submit Form</button>
+                                                                                            <button name="submit" type="submit" class="ff-btn  ff-btn-md ff_btn_style">Submit Form</button>
                                                                                         </div>
-                                                                                    </fieldset>
                                                                                 </form>
 
 

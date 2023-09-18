@@ -440,5 +440,95 @@ class Ajax extends MY_Controller {
 		return;
 		
 	}
+
+
+	public function guestbooks() {
+		$wedding_user_id 	= $_POST['wedding_user_id'];
+		$nama 				= $_POST['nama'];
+		$kehadiran			= $_POST['dropdown'];
+		$submit				= 'oke';
+
+		
+
+		$this->load->library('Global_lib');
+		
+		$data = $this->global_lib->uri_check();
+		
+		$data['myHelpers']=$this;
+		$this->load->model('Common_model');
+		$this->load->helper('text');
+		
+					
+		if(isset($_POST['submit']) || isset($_POST['draft']))
+		{
+			extract($_POST);
+
+	
+			
+			foreach($_POST as $k=>$v)
+			{
+				$_POST[$k] = $this->security->xss_clean($v);
+				$_POST[$k] = str_replace('[removed]','',$_POST[$k]);
+			}
+			
+			if(isset($_POST['multi_lang']) && !empty($_POST['multi_lang']))
+			{
+				foreach($_POST['multi_lang'] as $mk=>$mv)
+				{
+					foreach($mv as $mvk=>$mvv)
+					{
+						$_POST['multi_lang'][$mk][$mvk] = str_replace('[removed]','',$mvv);
+					}
+				}
+			}
+
+			
+			
+			$this->form_validation->set_error_delimiters("<div class='notification note-error'>	
+			<a href='#' class='close' title='Close'>
+			<span>close</span></a> 	<span class='icon'></span>	<p><strong>Error :</strong>", "</p></div>");
+			
+				
+			$this->form_validation->set_rules('wedding_user_id', 'wedding_user_id', 'trim|required');
+			
+			
+			
+			if ($this->form_validation->run() != FALSE)
+			{
+				extract($_POST,EXTR_OVERWRITE);
+				
+				
+				
+					
+				$datai = array( 
+					'wedding_user_id' => $wedding_user_id,
+					'guest_names' => trim($nama),
+					'email' => trim($nama),
+					'number_of_guest' => '1',
+					'event_title'	=> 'wedding',
+					'messages' => trim($dropdown),
+					'created_at'=> time(),
+					'updated_at' => time(),
+				);
+
+				// tesx($_POST, $datai);
+				$this->Common_model->commonInsert('wedding_invitations',$datai);
+
+
+				$_SESSION['msg'] = '
+							<div class="alert alert-success alert-dismissable" >
+								<button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+								
+								Send Successfully.
+						  </div>
+							';
+				redirect($_SERVER["HTTP_REFERER"]);	
+			
+			
+			}
+		}
+		
+		
+	}
 	
 }

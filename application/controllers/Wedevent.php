@@ -132,6 +132,9 @@ class Wedevent extends MY_Controller {
 		$this->load->view("$theme/header",$data);
 		
 	}
+
+
+	
 	
 	
 	
